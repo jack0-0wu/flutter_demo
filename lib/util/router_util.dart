@@ -3,10 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/config/routers.dart';
 
 class RouterUtil {
-  static push(context, {String routerName, Map data,pushThen}) {
+  static push(context, {String routerName, Map data, pushThen}) {
     Navigator.pushNamed(context, routerName,
-        arguments: data != null ?  data : null).then((value){
-      if(pushThen!=null)pushThen();
+            arguments: data != null ? data : null)
+        .then((value) {
+      if (pushThen != null) pushThen(value);
+    });
+  }
+
+  static pushReplacementNamed(context,
+      {String routerName, Map data, pushThen}) {
+    Navigator.pushReplacementNamed(context, routerName,
+            arguments: data != null ? data : null)
+        .then((value) {
+      if (pushThen != null) pushThen(value);
     });
   }
 

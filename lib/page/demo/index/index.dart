@@ -20,7 +20,7 @@ class _IndexState extends State<Index> {
           Column(
             children: [
               Button(
-                  text: "跳转RouterTest",
+                  text: "跳转路由工具类测试",
                   onTap: () {
                     RouterUtil.push(context, routerName: "routerTest");
                   }),
@@ -35,6 +35,11 @@ class _IndexState extends State<Index> {
                   text: "跳转ClippingDemo",
                   onTap: () {
                     RouterUtil.push(context, routerName: "clippingPictureDemo");
+                  }),
+              Button(
+                  text: "跳转剪裁demo",
+                  onTap: () {
+                    RouterUtil.push(context, routerName: "clippingDemo");
                   }),
             ],
           ),
