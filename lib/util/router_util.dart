@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_study/config/routers.dart';
+import 'package:flutter_demo/config/routers.dart';
 
 class RouterUtil {
   static push(context, {String routerName, Map data,pushThen}) {

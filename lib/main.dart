@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/page/demo/index/index.dart';
-import 'package:flutter_study/util/router_util.dart';
+import 'package:flutter_demo/page/demo/index/index.dart';
+import 'package:flutter_demo/util/router_util.dart';
 
 void main() {
   runApp(MyApp());

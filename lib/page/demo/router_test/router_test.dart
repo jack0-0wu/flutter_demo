@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_study/util/util.dart';
+import 'package:flutter_demo/util/util.dart';
 
 class RouterTest extends StatefulWidget {
   @override
@@ -18,14 +18,13 @@ class _RouterTestState extends State<RouterTest> {
       ),
       body: Center(
         child: Column(
-          children: [
-            RaisedButton(
-              child: Text('Go!'),
-              onPressed: () {
-                RouterUtil.push(context,
-                    routerName: "routerTest2", data: {"666": "66666"});
-              },
-            ),
+          children: [Button(
+            text: 'Go!',
+            onTap: (){
+              RouterUtil.push(context,
+                  routerName: "routerTest2", data: {"666": "66666"});
+            }
+          )
           ],
         ),
       ),

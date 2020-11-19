@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_demo/util/custom_widget.dart';
 
 
 class PlanFromTest extends StatefulWidget {
@@ -31,16 +32,18 @@ class _PlanFromTestState extends State<PlanFromTest> {
   }
   @override
   Widget build(BuildContext context) {
-    return new Material(
-      child: new Center(
-        child: new Column(
+    return  Material(
+      child:  Center(
+        child:  Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            new RaisedButton(
-              child: new Text('Get Battery Level'),
-              onPressed: _getBatteryLevel,
+            Button(
+              text:'Get Battery Level',
+              onTap: (){
+                _getBatteryLevel();
+              }
             ),
-            new Text(_batteryLevel),
+             Text(_batteryLevel),
           ],
         ),
       ),

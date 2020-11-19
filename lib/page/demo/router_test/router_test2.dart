@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_study/util/util.dart';
+import 'package:flutter_demo/util/util.dart';
 
 class RouterTest2 extends StatelessWidget {
   Map data = {};

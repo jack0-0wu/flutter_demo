@@ -9,7 +9,7 @@ class TestNative2 extends StatefulWidget {
 }
 
 class _TestNative2State extends State<TestNative2> {
-  var planForm = new MethodChannel("testMethod");
+  var planForm =  MethodChannel("testMethod");
   Future test()async{
     var user = await planForm.invokeMethod("getUser");
     print(user);

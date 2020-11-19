@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_study/util/util.dart';
+import 'package:flutter_demo/util/util.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ClippingPictureDemo extends StatefulWidget {
@@ -15,7 +15,7 @@ class _ClippingPictureDemoState extends State<ClippingPictureDemo> {
   final picker = ImagePicker();
 
   Future getImage() async {
-    var  pickedFile = await picker.getImage(source: ImageSource.camera);
+    final  pickedFile = await picker.getImage(source: ImageSource.camera);
 
     setState(() {
       if (pickedFile != null) {
