@@ -32,14 +32,19 @@ class _IndexState extends State<Index> {
               //       RouterUtil.push(context, routerName: "planFromTest");
               //     }),
               Button(
-                  text: "跳转ClippingDemo",
+                  text: "image_crop开源软件使用Demo",
                   onTap: () {
-                    RouterUtil.push(context, routerName: "clippingPictureDemo");
+                    RouterUtil.push(context, routerName: "cropDemo");
                   }),
               Button(
                   text: "跳转剪裁demo",
                   onTap: () {
                     RouterUtil.push(context, routerName: "clippingDemo");
+                  }),
+              Button(
+                  text: "文字图标一行显示demo",
+                  onTap: () {
+                    RouterUtil.push(context, routerName: "richTextDemo");
                   }),
             ],
           ),

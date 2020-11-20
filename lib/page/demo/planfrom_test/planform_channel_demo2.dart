@@ -18,7 +18,6 @@ class _PlanFromTestState extends State<PlanFromTest> {
   Future<Null> _getBatteryLevel() async {
     String batteryLevel;
     try {
-      print("11111");
       final int result = await platform.invokeMethod('getBatteryLevel');
       print("result");
       batteryLevel = 'Battery level at $result % .';

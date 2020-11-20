@@ -43,3 +43,13 @@ Button(
         child: Font(text: text, color: textColor),
       ),
     );
+
+CustomAppBar(
+        {String title = "无标题", textColor = Colors.white, titleSize = 100}) =>
+    AppBar(
+      title: Font(
+          text: title,
+          size: SizeAdaptiveUtil().size(titleSize),
+          color: textColor),
+      centerTitle: true,
+    );

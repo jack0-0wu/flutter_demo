@@ -10,7 +10,6 @@ class RouterTest2 extends StatelessWidget {
   }
 
   Widget build(BuildContext context) {
-    print(data);
     return Scaffold(
       appBar: AppBar(
         title: Font(text: "路由测试页二", size: 40, color: Colors.white),

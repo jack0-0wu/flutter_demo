@@ -6,7 +6,7 @@ import 'package:image_crop/image_crop.dart';
 import 'package:image_picker/image_picker.dart';
 
 // ignore: must_be_immutable
-class ClippingDemo2 extends StatefulWidget {
+class ClippingPicture extends StatefulWidget {
   String data;
 
   setData(data) {
@@ -14,10 +14,10 @@ class ClippingDemo2 extends StatefulWidget {
   }
 
   @override
-  _ClippingDemo2State createState() => new _ClippingDemo2State();
+  _ClippingPictureState createState() => new _ClippingPictureState();
 }
 
-class _ClippingDemo2State extends State<ClippingDemo2> {
+class _ClippingPictureState extends State<ClippingPicture> {
   final cropKey = GlobalKey<CropState>();
   File _file;
   File _sample;

@@ -6,15 +6,16 @@ import 'package:image_crop/image_crop.dart';
 import 'package:image_picker/image_picker.dart';
 
 // ignore: must_be_immutable
-class ClippingPictureDemo extends StatefulWidget {
+class ChoosePicture extends StatefulWidget {
   Function push;
-  ClippingPictureDemo({this.push});
+
+  ChoosePicture({this.push});
 
   @override
-  _ClippingPictureDemoState createState() => _ClippingPictureDemoState();
+  _ChoosePictureState createState() => _ChoosePictureState();
 }
 
-class _ClippingPictureDemoState extends State<ClippingPictureDemo> {
+class _ChoosePictureState extends State<ChoosePicture> {
   File _image;
   final picker = ImagePicker();
 
@@ -24,7 +25,7 @@ class _ClippingPictureDemoState extends State<ClippingPictureDemo> {
     if (pickedFile != null) {
       _image = File(pickedFile.path);
       RouterUtil.pushReplacementNamed(context,
-          routerName: "clippingDemo2",
+          routerName: "clippingPicture",
           data: {"path": pickedFile.path}, pushThen: (value) {
         widget.push(value);
       });
@@ -39,10 +40,10 @@ class _ClippingPictureDemoState extends State<ClippingPictureDemo> {
     if (pickedFile != null) {
       _image = File(pickedFile.path);
       RouterUtil.pushReplacementNamed(context,
-          routerName: "clippingDemo2",
+          routerName: "clippingPicture",
           data: {"path": pickedFile.path}, pushThen: (value) {
         widget.push(value);
-      } );
+      });
     } else {
       print('No image selected.');
     }
