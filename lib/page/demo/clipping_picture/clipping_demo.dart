@@ -10,6 +10,7 @@ class ClippingDemo extends StatefulWidget {
 }
 
 class _ClippingDemoState extends State<ClippingDemo> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
