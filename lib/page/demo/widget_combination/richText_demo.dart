@@ -28,7 +28,7 @@ import 'package:flutter_demo/util/util.dart';
                  child: RichText(
                    text: TextSpan(children: [
                      TextSpan(
-                         text: "文字和图标一行显示的效果",
+                         text: "图标在文字末尾换行显示",
                          style: TextStyle(color: Colors.black)),
                      WidgetSpan(child: Icon(Icons.camera))
                    ]),
