@@ -26,7 +26,7 @@ Font(
 Button(
         {width,
         height,
-        text,
+        text = "",
         textColor = Colors.white,
         buttonColor = Colors.lightBlue,
         onTap}) =>

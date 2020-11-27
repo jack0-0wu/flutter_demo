@@ -61,6 +61,16 @@ class _IndexState extends State<Index> {
                 onTap: () {
                   RouterUtil.push(context, routerName: "fakerDemo");
                 }),
+            // Button(
+            //     text: "日历控件Demo",
+            //     onTap: () {
+            //       RouterUtil.push(context, routerName: "calendarDemo");
+            //     }),
+            Button(
+                text: "json转modelDemo",
+                onTap: () {
+                  RouterUtil.push(context, routerName: "jsonToModelDemo");
+                }),
           ],
         ),
       ),

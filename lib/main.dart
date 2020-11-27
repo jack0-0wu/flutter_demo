@@ -1,9 +1,17 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
 import 'package:flutter_demo/util/router_util.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+      // MyApp()
+    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => MyApp(), // Wrap your app
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,6 +19,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context), // Add the locale here
+      builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
       onGenerateRoute: RouterUtil.jumpTo,
       theme: ThemeData(

@@ -1,8 +1,10 @@
+import 'package:flutter_demo/page/demo/calendar_demo/calendar_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/clipping_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/clipping_picture.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/crop_demo.dart';
 import 'package:flutter_demo/page/demo/faker_demo/faker_demo.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
+import 'package:flutter_demo/page/demo/json_to_model_demo/json_to_model_demo.dart';
 import 'package:flutter_demo/page/demo/logger_test/logger_demo.dart';
 import 'package:flutter_demo/page/demo/planfrom_test/planform_channel_demo2.dart';
 import 'package:flutter_demo/page/demo/router_test/router_test.dart';
@@ -21,7 +23,9 @@ class Routers {
       'clippingPicture':ClippingPicture(),
       'richTextDemo':RichTextDemo(),
       'loggerDemo':LoggerDemo(),
-      'fakerDemo':FakerDemo()
+      'fakerDemo':FakerDemo(),
+      'calendarDemo':CalendarDemo(),
+      'jsonToModelDemo':JsonToModelDemo()
     }
   ];
 }
