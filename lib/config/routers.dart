@@ -1,4 +1,5 @@
 import 'package:flutter_demo/page/demo/calendar_demo/calendar_demo.dart';
+import 'package:flutter_demo/page/demo/clean_cache_demo/clean_cache_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/clipping_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/clipping_picture.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/crop_demo.dart';
@@ -25,7 +26,8 @@ class Routers {
       'loggerDemo':LoggerDemo(),
       'fakerDemo':FakerDemo(),
       'calendarDemo':CalendarDemo(),
-      'jsonToModelDemo':JsonToModelDemo()
+      'jsonToModelDemo':JsonToModelDemo(),
+      'cleanCacheDemo':CleanCacheDemo()
     }
   ];
 }

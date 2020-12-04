@@ -71,6 +71,11 @@ class _IndexState extends State<Index> {
                 onTap: () {
                   RouterUtil.push(context, routerName: "jsonToModelDemo");
                 }),
+            Button(
+                text: "清理应用缓存demo",
+                onTap: () {
+                  RouterUtil.push(context, routerName: "cleanCacheDemo");
+                }),
           ],
         ),
       ),
