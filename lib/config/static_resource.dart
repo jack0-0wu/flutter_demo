@@ -4,6 +4,7 @@
 /// Date: 2020/12/5
 /// Description:
 class StaticResource {
+  //首页demoMap
   static Map<String, String> demoMap = {
     "路由工具类测试": "routerTest",
     "image_crop包Demo": "cropDemo",
@@ -12,5 +13,6 @@ class StaticResource {
     "Logger包demo": "loggerDemo",
     "Faker包demo": "fakerDemo",
     "json转model Demo": "jsonToModelDemo",
+    "清除应用缓存 Demo": "cleanCacheDemo",
   };
 }

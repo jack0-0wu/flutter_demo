@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_demo/page/demo/calendar_demo/calendar_demo.dart';
+import 'package:flutter_demo/page/demo/clean_cache_demo/clean_cache_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/clipping_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/clipping_picture.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/crop_demo.dart';
@@ -13,6 +14,7 @@ import 'package:flutter_demo/page/demo/router_test/router_test2.dart';
 import 'package:flutter_demo/page/demo/widget_combination/richText_demo.dart';
 
 class Routers {
+  //路由表
   static Map<String, Widget> routerMap = {
     'routerTest': RouterTest(),
     'planFromTest': PlanFromTest(),
@@ -25,6 +27,7 @@ class Routers {
     'loggerDemo': LoggerDemo(),
     'fakerDemo': FakerDemo(),
     'calendarDemo': CalendarDemo(),
-    'jsonToModelDemo': JsonToModelDemo()
+    'jsonToModelDemo': JsonToModelDemo(),
+    'cleanCacheDemo': CleanCacheDemo()
   };
 }
