@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/config/static_resource.dart';
 import 'package:flutter_demo/util/util.dart';
 
 class Index extends StatefulWidget {
@@ -24,53 +25,24 @@ class _IndexState extends State<Index> {
               crossAxisSpacing: 10.s,
               mainAxisSpacing: 10.s),
           children: [
-            Button(
-                text: "跳转路由工具类测试",
-                onTap: () {
-                  RouterUtil.push(context, routerName: "routerTest");
-                }),
-
+            for (String demoName in StaticResource.demoMap.keys.toList())
+              Button(
+                  text: demoName,
+                  onTap: () {
+                    RouterUtil.push(context,
+                        routerName: StaticResource.demoMap[demoName]);
+                  }),
             //需要更新
             // Button(
             //     text: "跳转ChannelTest",
             //     onTap: () {
             //       RouterUtil.push(context, routerName: "planFromTest");
             //     }),
-            Button(
-                text: "image_crop开源软件包Demo",
-                onTap: () {
-                  RouterUtil.push(context, routerName: "cropDemo");
-                }),
-            Button(
-                text: "跳转剪裁demo",
-                onTap: () {
-                  RouterUtil.push(context, routerName: "clippingDemo");
-                }),
-            Button(
-                text: "图标在文字末尾换行显示demo",
-                onTap: () {
-                  RouterUtil.push(context, routerName: "richTextDemo");
-                }),
-            Button(
-                text: "Logger开源软件包demo",
-                onTap: () {
-                  RouterUtil.push(context, routerName: "loggerDemo");
-                }),
-            Button(
-                text: "Faker开源软件包demo",
-                onTap: () {
-                  RouterUtil.push(context, routerName: "fakerDemo");
-                }),
             // Button(
             //     text: "日历控件Demo",
             //     onTap: () {
             //       RouterUtil.push(context, routerName: "calendarDemo");
             //     }),
-            Button(
-                text: "json转modelDemo",
-                onTap: () {
-                  RouterUtil.push(context, routerName: "jsonToModelDemo");
-                }),
           ],
         ),
       ),
