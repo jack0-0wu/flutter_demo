@@ -9,6 +9,12 @@ import 'package:flutter_demo/page/demo/index/index.dart';
 import 'package:flutter_demo/page/demo/json_to_model_demo/json_to_model_demo.dart';
 import 'package:flutter_demo/page/demo/logger_test/logger_demo.dart';
 import 'package:flutter_demo/page/demo/planfrom_test/planform_channel_demo2.dart';
+import 'package:flutter_demo/page/demo/responsiveness_demo/aspectRatio_demo.dart';
+import 'package:flutter_demo/page/demo/responsiveness_demo/expanded_flexible_demo.dart';
+import 'package:flutter_demo/page/demo/responsiveness_demo/fractionallySized_demo.dart';
+import 'package:flutter_demo/page/demo/responsiveness_demo/layoutBuilder_demo.dart';
+import 'package:flutter_demo/page/demo/responsiveness_demo/mediaQuery_demo.dart';
+import 'package:flutter_demo/page/demo/responsiveness_demo/orientationBuilder_demo.dart';
 import 'package:flutter_demo/page/demo/router_test/router_test.dart';
 import 'package:flutter_demo/page/demo/router_test/router_test2.dart';
 import 'package:flutter_demo/page/demo/widget_combination/richText_demo.dart';
@@ -28,6 +34,12 @@ class Routers {
     'fakerDemo': FakerDemo(),
     'calendarDemo': CalendarDemo(),
     'jsonToModelDemo': JsonToModelDemo(),
-    'cleanCacheDemo': CleanCacheDemo()
+    'cleanCacheDemo': CleanCacheDemo(),
+    'mediaQueryDemo':MediaQueryDemo(),
+    'layoutBuilderDemo':LayoutBuilderDemo(),
+    'orientationBuilderDemo':OrientationBuilderDemo(),
+    'expandedFlexibleDemo':ExpandedFlexibleDemo(),
+    'fractionallySizedDemo':FractionallySizedDemo(),
+    'aspectRatioDemo':AspectRatioDemo(),
   };
 }

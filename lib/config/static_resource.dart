@@ -14,5 +14,11 @@ class StaticResource {
     "Faker包demo": "fakerDemo",
     "json转model Demo": "jsonToModelDemo",
     "清除应用缓存 Demo": "cleanCacheDemo",
+    "响应式布局 Demo": "mediaQueryDemo",
+    "响应式布局 Demo2": "layoutBuilderDemo",
+    "响应式布局 Demo3": "orientationBuilderDemo",
+    "响应式布局 Demo4": "expandedFlexibleDemo",
+    "响应式布局 Demo5": "fractionallySizedDemo",
+    "响应式布局 Demo6": "aspectRatioDemo",
   };
 }
