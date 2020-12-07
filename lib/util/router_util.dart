@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/config/routers.dart';
 
 class RouterUtil {
-  static push(context, {String routerName, Map data, Function pushThen}) {
+  static push(context, {String routerName, dynamic data, Function pushThen}) {
     Navigator.pushNamed(context, routerName,
             arguments: data != null ? data : null)
         .then((value) {
