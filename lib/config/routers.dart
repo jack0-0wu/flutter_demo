@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_demo/page/demo/calendar_demo/calendar_demo.dart';
+import 'package:flutter_demo/page/demo/camera_demo/camera_demo.dart';
 import 'package:flutter_demo/page/demo/clean_cache_demo/clean_cache_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/clipping_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture/clipping_picture.dart';
@@ -41,5 +42,6 @@ class Routers {
     'expandedFlexibleDemo':ExpandedFlexibleDemo(),
     'fractionallySizedDemo':FractionallySizedDemo(),
     'aspectRatioDemo':AspectRatioDemo(),
+    'cameraDemo':CameraDemo(),
   };
 }

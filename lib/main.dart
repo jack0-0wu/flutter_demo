@@ -1,10 +1,19 @@
+import 'package:camera/camera.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
 import 'package:flutter_demo/util/router_util.dart';
 
-void main() {
+Future<void> main() async {
+  // Ensure that plugin services are initialized so that `availableCameras()`
+// can be called before `runApp()`
+  WidgetsFlutterBinding.ensureInitialized();
+
+// Obtain a list of the available cameras on the device.
+  final cameras = await availableCameras();
+
+
   runApp(MyApp()
       //多屏幕展示
       // DevicePreview(
