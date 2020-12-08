@@ -20,6 +20,6 @@ class StaticResource {
     "响应式布局相关组件 Demo4": "expandedFlexibleDemo",
     "响应式布局相关组件 Demo5": "fractionallySizedDemo",
     "响应式布局相关组件 Demo6": "aspectRatioDemo",
-    "调用摄像头Demo": "cameraDemo",
+    "自定义拍照画面Demo": "cameraDemo",
   };
 }
