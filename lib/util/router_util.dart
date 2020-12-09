@@ -1,14 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/config/routers.dart';
+import '../config/routers.dart';
 
 class RouterUtil {
   //路由key
-  static final GlobalKey<NavigatorState> routerGlobalKey =  GlobalKey<NavigatorState>();
+  static final GlobalKey<NavigatorState> routerGlobalKey =
+      GlobalKey<NavigatorState>();
 
   static push({String routerName, dynamic data, Function pushThen}) {
-    routerGlobalKey.currentState.pushNamed(routerName,
-            arguments: data != null ? data : null)
+    routerGlobalKey.currentState
+        .pushNamed(routerName, arguments: data != null ? data : null)
         .then((value) {
       if (pushThen != null) pushThen(value);
     });
@@ -16,11 +17,11 @@ class RouterUtil {
 
   static pushReplacementNamed(
       {String routerName, Map data, Function pushThen}) {
-    routerGlobalKey.currentState..pushReplacementNamed(routerName,
-            arguments: data != null ? data : null)
-        .then((value) {
-      if (pushThen != null) pushThen(value);
-    });
+    routerGlobalKey.currentState
+      ..pushReplacementNamed(routerName, arguments: data != null ? data : null)
+          .then((value) {
+        if (pushThen != null) pushThen(value);
+      });
   }
 
   static _matchRouter(String routerName) {

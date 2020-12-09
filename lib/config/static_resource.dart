@@ -24,6 +24,7 @@ class StaticResource {
     "响应式布局相关组件 Demo6": "aspectRatioDemo",
     "自定义拍照画面Demo": "cameraDemo",
     "指定路由key Demo": "globalKeyDemo",
+    "异步future Demo": "futureDemo",
   };
 
   //测试用key
