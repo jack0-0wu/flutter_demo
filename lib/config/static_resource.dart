@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 /// Copyright (C), 2020-2020, flutter_demo
 /// FileName: static_resource
 /// Author: Jack
@@ -5,7 +7,7 @@
 /// Description:
 class StaticResource {
   //首页demoMap
-  static Map<String, String> demoMap = {
+  static final Map<String, String> demoMap = {
     "路由工具类测试": "routerTest",
     "image_crop包Demo": "cropDemo",
     "图片上传剪裁demo": "clippingDemo",
@@ -21,5 +23,9 @@ class StaticResource {
     "响应式布局相关组件 Demo5": "fractionallySizedDemo",
     "响应式布局相关组件 Demo6": "aspectRatioDemo",
     "自定义拍照画面Demo": "cameraDemo",
+    "指定路由key Demo": "globalKeyDemo",
   };
+
+  //测试用key
+  static final GlobalKey testKey =  GlobalKey();
 }

@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
 import 'package:flutter_demo/util/router_util.dart';
 
+import 'config/static_resource.dart';
+
 Future<void> main() async {
   // Ensure that plugin services are initialized so that `availableCameras()`
 // can be called before `runApp()`
@@ -28,11 +30,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //路由配置
+      navigatorKey: RouterUtil.routerGlobalKey,
+      onGenerateRoute: RouterUtil.jumpTo,
       //多屏幕展示
       // locale: DevicePreview.locale(context), // Add the locale here
       // builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
-      onGenerateRoute: RouterUtil.jumpTo,
       theme: ThemeData(
         // This is the theme of your application.
         //

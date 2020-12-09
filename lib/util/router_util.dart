@@ -3,17 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/config/routers.dart';
 
 class RouterUtil {
-  static push(context, {String routerName, dynamic data, Function pushThen}) {
-    Navigator.pushNamed(context, routerName,
+  //路由key
+  static final GlobalKey<NavigatorState> routerGlobalKey =  GlobalKey<NavigatorState>();
+
+  static push({String routerName, dynamic data, Function pushThen}) {
+    routerGlobalKey.currentState.pushNamed(routerName,
             arguments: data != null ? data : null)
         .then((value) {
       if (pushThen != null) pushThen(value);
     });
   }
 
-  static pushReplacementNamed(context,
+  static pushReplacementNamed(
       {String routerName, Map data, Function pushThen}) {
-    Navigator.pushReplacementNamed(context, routerName,
+    routerGlobalKey.currentState..pushReplacementNamed(routerName,
             arguments: data != null ? data : null)
         .then((value) {
       if (pushThen != null) pushThen(value);

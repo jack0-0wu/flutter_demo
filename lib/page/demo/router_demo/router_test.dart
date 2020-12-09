@@ -21,7 +21,7 @@ class _RouterTestState extends State<RouterTest> {
           children: [Button(
             text: 'Go!',
             onTap: (){
-              RouterUtil.push(context,
+              RouterUtil.push(
                   routerName: "routerTest2", data: {"666": "66666"});
             }
           )

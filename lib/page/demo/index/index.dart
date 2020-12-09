@@ -29,7 +29,7 @@ class _IndexState extends State<Index> {
               Button(
                   text: demoName,
                   onTap: () {
-                    RouterUtil.push(context,
+                    RouterUtil.push(
                         routerName: StaticResource.demoMap[demoName]);
                   }),
             //需要更新
