@@ -9,25 +9,29 @@ class RouterUtil {
 
   static push({String routerName, dynamic data, Function pushThen}) {
     routerGlobalKey.currentState
-        .pushNamed(routerName, arguments: data != null ? data : null)
+        .pushNamed(routerName, arguments: data)
         .then((value) {
       if (pushThen != null) pushThen(value);
     });
   }
 
   static pushReplacementNamed(
-      {String routerName, Map data, Function pushThen}) {
+      {String routerName, dynamic data, Function pushThen}) {
     routerGlobalKey.currentState
-      ..pushReplacementNamed(routerName, arguments: data != null ? data : null)
-          .then((value) {
+      ..pushReplacementNamed(routerName, arguments: data).then((value) {
         if (pushThen != null) pushThen(value);
       });
   }
 
+  static pop({dynamic value}) {
+    value != null
+        ? routerGlobalKey.currentState.pop(value)
+        : routerGlobalKey.currentState.pop();
+  }
+
+  //匹配路由
   static _matchRouter(String routerName) {
-    if (Routers.routerMap[routerName] != null) {
-      return Routers.routerMap[routerName];
-    }
+    return Routers.routerMap[routerName];
   }
 
   static Route<dynamic> jumpTo(RouteSettings settings) {

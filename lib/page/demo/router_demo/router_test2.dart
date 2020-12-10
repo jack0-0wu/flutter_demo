@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/util/util.dart';
 
 class RouterTest2 extends StatelessWidget {
-  Map data = {};
+  String data = "";
 
   setData(data) {
     this.data = data;
@@ -16,7 +16,19 @@ class RouterTest2 extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Text("${data}"),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 20.s,
+            ),
+            Text(data),
+            Button(
+                text: "返回",
+                onTap: () {
+                  RouterUtil.pop();
+                })
+          ],
+        ),
       ),
     );
   }

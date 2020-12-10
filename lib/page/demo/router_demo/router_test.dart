@@ -22,7 +22,7 @@ class _RouterTestState extends State<RouterTest> {
             text: 'Go!',
             onTap: (){
               RouterUtil.push(
-                  routerName: "routerTest2", data: {"666": "66666"});
+                  routerName: "routerTest2", data: "66666");
             }
           )
           ],
