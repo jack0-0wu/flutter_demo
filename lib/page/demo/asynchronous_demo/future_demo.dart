@@ -26,9 +26,50 @@ class _FutureDemoState extends State<FutureDemo> {
     print('main #2 of 2');
   }
 
+  Future testFuture() {
+    //下面是一个耗时三秒的任务
+    return Future.delayed(Duration(seconds: 3), () => print('异步方法'));
+  }
+
+
+
+  testFuture3() {
+    Future.delayed(Duration(seconds: 3), () => print('异步方法1'));
+    Future(() {
+      print('异步方法2');
+    });
+    Future.microtask(() => print('异步方法3'));
+    Future.sync(() => print('异步方法4'));
+  }
+
+  testFuture4() {
+    Future(() {
+      print('异步方法');
+    }).then((value) => print('异步方法2'));
+  }
+  testFuture2() {
+    print("普通方法");
+  }
+
+  testFuture5() async {
+   await Future.delayed(Duration(seconds: 3), () => print('异步方法1'));
+  }
+
+  test1()async{
+   await testFuture5();
+    testFuture2();
+  }
+
   @override
   Widget build(BuildContext context) {
-    test();
+    // testFuture();
+    // testFuture();
+    // testFuture2();
+    // testFuture3();
+    // testFuture2();
+    // testFuture2();
+    // testFuture4();
+    test1();
     return Scaffold(
       appBar: CustomAppBar(title: "future demo"),
     );

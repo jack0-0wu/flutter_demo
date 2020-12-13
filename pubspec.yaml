@@ -37,7 +37,9 @@ dependencies:
   path_provider: ^1.6.24
   # 清理缓存
   flutter_cache_manager: ^2.0.0
+  # 相机插件
   camera: 0.5.7+4
+  # 请求权限
   permission_handler: 3.2.2
 
   # The following adds the Cupertino Icons font to your application.
