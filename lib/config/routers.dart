@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_demo/config/static_resource.dart';
 import 'package:flutter_demo/page/demo/asynchronous_demo/future_demo.dart';
+import 'package:flutter_demo/page/demo/asynchronous_demo/streamBuilder_demo.dart';
+import 'package:flutter_demo/page/demo/asynchronous_demo/stream_demo.dart';
 import 'package:flutter_demo/page/demo/calendar_demo/calendar_demo.dart';
 import 'package:flutter_demo/page/demo/camera_demo/camera_demo.dart';
 import 'package:flutter_demo/page/demo/clean_cache_demo/clean_cache_demo.dart';
@@ -47,6 +49,8 @@ class Routers {
     'aspectRatioDemo': AspectRatioDemo(),
     'cameraDemo': CameraDemo(),
     'futureDemo': FutureDemo(),
+    'streamDemo': StreamDemo(),
+    'streamBuilderDemo': StreamBuilderDemo(),
     'globalKeyDemo': GlobalKeyDemo(key: StaticResource.testKey),
   };
 }

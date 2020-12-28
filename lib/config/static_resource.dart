@@ -25,8 +25,10 @@ class StaticResource {
     "自定义拍照画面Demo": "cameraDemo",
     "指定路由key Demo": "globalKeyDemo",
     "异步future Demo": "futureDemo",
+    "异步stream Demo": "streamDemo",
+    "streamBuilder Demo": "streamBuilderDemo",
   };
 
   //测试用key
-  static final GlobalKey testKey =  GlobalKey();
+  static final GlobalKey testKey = GlobalKey();
 }
