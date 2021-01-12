@@ -43,12 +43,14 @@ class _FutureDemoState extends State<FutureDemo> {
   }
 
   testFuture4() {
+    print("普通方法1");
+
     Future(() {
       print('异步方法');
-    }).then((value) => print('异步方法2'));
+    });
   }
   testFuture2() {
-    print("普通方法");
+    print("普通方法2");
   }
 
   testFuture5() async {
@@ -67,9 +69,10 @@ class _FutureDemoState extends State<FutureDemo> {
     // testFuture2();
     // testFuture3();
     // testFuture2();
-    // testFuture2();
-    // testFuture4();
-    test1();
+    testFuture4();
+    testFuture2();
+
+    //test1();
     return Scaffold(
       appBar: CustomAppBar(title: "future demo"),
     );
