@@ -28,10 +28,19 @@ class _FutureDemoState extends State<FutureDemo> {
 
   Future testFuture() {
     //下面是一个耗时三秒的任务
-    return Future.delayed(Duration(seconds: 3), () => print('异步方法'));
+    // return Future.delayed(Duration(seconds: 3), () => print('异步方法'));
+    return Future(() {});
   }
 
+  Future<void> testFutureVoid() {
+    //下面是一个耗时三秒的任务
+    Timer(Duration(seconds: 3), () => print('异步方法'));
+    return null;
+  }
 
+  Future<String> testFutureString() {
+    return Future(() => "String类型数据");
+  }
 
   testFuture3() {
     Future.delayed(Duration(seconds: 3), () => print('异步方法1'));
@@ -49,19 +58,22 @@ class _FutureDemoState extends State<FutureDemo> {
       print('异步方法');
     });
   }
+
   testFuture2() {
     print("普通方法2");
   }
 
   testFuture5() async {
-   await Future.delayed(Duration(seconds: 3), () => print('异步方法1'));
+    await Future.delayed(Duration(seconds: 3), () => print('异步方法1'));
   }
 
-  test1()async{
-   await testFuture5();
+  test1() async {
+    await testFuture5();
     testFuture2();
   }
-
+  void testA(){
+    return null;
+  }
   @override
   Widget build(BuildContext context) {
     // testFuture();
@@ -69,7 +81,8 @@ class _FutureDemoState extends State<FutureDemo> {
     // testFuture2();
     // testFuture3();
     // testFuture2();
-    testFuture4();
+    // testFuture();
+    testFutureVoid();
     testFuture2();
 
     //test1();
