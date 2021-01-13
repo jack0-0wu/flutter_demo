@@ -27,71 +27,43 @@ class _FutureDemoState extends State<FutureDemo> {
   }
 
   Future testFuture() {
-    //下面是一个耗时三秒的任务
-    // return Future.delayed(Duration(seconds: 3), () => print('异步方法'));
-    return Future(() {});
-  }
-
-  Future<void> testFutureVoid() {
-    //下面是一个耗时三秒的任务
-    Timer(Duration(seconds: 3), () => print('异步方法'));
-    return null;
+    return Future(() {
+      //此处写入需要异步执行的代码
+    });
   }
 
   Future<String> testFutureString() {
     return Future(() => "String类型数据");
   }
-  //Future future = Future.delayed(Duration(seconds: 3), () => print('异步方法1'));
 
-  testFuture3() {
-    Future.error("error异步方法");
-    Future.value("value异步方法");
-    Future.delayed(Duration(seconds: 3), () => print('delayed异步方法'));
-    Future(() {
-      print('Future异步方法');
-    });
+  Future future = Future.delayed(Duration(seconds: 3), () => print('异步方法变量'));
 
-    Future.microtask(() => print('microtask异步方法'));
+  testFutureConstruction() {
+    // Future.error("error异步方法");
+    // Future.value("value异步方法");
+
+    Future(() => print('Future异步方法'));
+    Future.delayed(Duration(seconds: 0), () => print('delayed异步方法'));
+
+    Future.microtask(() => print('future microtask异步方法'));
+
     Future.sync(() => print('sync异步方法'));
-
   }
 
-  testFuture4() {
-    print("普通方法1");
+  testSimple() {
+    print("普通方法");
+  }
 
-    Future(() {
-      print('异步方法');
+  Future<void> testFutureVoid() {
+    return Future(() {
+      for (int i = 0; i < 1000000000; i++) {}
+      print("test");
     });
   }
 
-  testFuture2() {
-    print("普通方法2");
-  }
-
-  testFuture5() async {
-    await Future.delayed(Duration(seconds: 3), () => print('异步方法1'));
-  }
-
-  test1() async {
-    await testFuture5();
-    testFuture2();
-  }
-  void testA(){
-    return null;
-  }
   @override
   Widget build(BuildContext context) {
-    // testFuture();
-    // testFuture();
-    // testFuture2();
-    // testFuture3();
-    // testFuture2();
-    // testFuture();
-    //testFutureVoid();
-    //future;
-    testFuture3();
-
-    //test1();
+    testFutureConstruction();
     return Scaffold(
       appBar: CustomAppBar(title: "future demo"),
     );
