@@ -41,14 +41,19 @@ class _FutureDemoState extends State<FutureDemo> {
   Future<String> testFutureString() {
     return Future(() => "String类型数据");
   }
+  //Future future = Future.delayed(Duration(seconds: 3), () => print('异步方法1'));
 
   testFuture3() {
-    Future.delayed(Duration(seconds: 3), () => print('异步方法1'));
+    Future.error("error异步方法");
+    Future.value("value异步方法");
+    Future.delayed(Duration(seconds: 3), () => print('delayed异步方法'));
     Future(() {
-      print('异步方法2');
+      print('Future异步方法');
     });
-    Future.microtask(() => print('异步方法3'));
-    Future.sync(() => print('异步方法4'));
+
+    Future.microtask(() => print('microtask异步方法'));
+    Future.sync(() => print('sync异步方法'));
+
   }
 
   testFuture4() {
@@ -82,8 +87,9 @@ class _FutureDemoState extends State<FutureDemo> {
     // testFuture3();
     // testFuture2();
     // testFuture();
-    testFutureVoid();
-    testFuture2();
+    //testFutureVoid();
+    //future;
+    testFuture3();
 
     //test1();
     return Scaffold(
