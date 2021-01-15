@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 class StaticResource {
   //首页demoMap
   static final Map<String, String> demoMap = {
+    "今天吃什么？": "todayFoodDemo",
     "路由工具类测试": "routerTest",
     "image_crop包Demo": "cropDemo",
     "图片上传剪裁demo": "clippingDemo",
