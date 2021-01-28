@@ -33,13 +33,12 @@ class _TodayFoodDemoState extends State<TodayFoodDemo> {
     '粥',
     '汉堡',
     '泡面',
-    '饺子 ',
+    '饺子',
     '鸡胸肉',
     '楼下美食广场',
     '炒面',
     '石锅拌饭',
     '沙拉',
-    '西北风',
     '炒饭',
     '汤圆',
   ];
@@ -98,15 +97,18 @@ class _TodayFoodDemoState extends State<TodayFoodDemo> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20.s),
                               color: Colors.lightGreen,
-
                             ),
-                            padding: EdgeInsets.fromLTRB(30.s, 20.s, 30.s, 20.s),
+                            padding:
+                                EdgeInsets.fromLTRB(30.s, 20.s, 30.s, 20.s),
                             child: Font(text: foodName),
                           ),
                           Positioned(
                             right: -10.s,
                             top: -10.s,
-                            child: Icon(Icons.cancel,size: 30.s,),
+                            child: Icon(
+                              Icons.cancel,
+                              size: 30.s,
+                            ),
                           )
                         ],
                       ),
@@ -117,7 +119,6 @@ class _TodayFoodDemoState extends State<TodayFoodDemo> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20.s),
                             color: Colors.lightGreen,
-
                           ),
                           padding: EdgeInsets.fromLTRB(30.s, 20.s, 30.s, 20.s),
                           child: Font(text: "新增"),
@@ -125,7 +126,10 @@ class _TodayFoodDemoState extends State<TodayFoodDemo> {
                         Positioned(
                           right: -10.s,
                           top: -10.s,
-                          child: Icon(Icons.cancel,size: 30.s,),
+                          child: Icon(
+                            Icons.cancel,
+                            size: 30.s,
+                          ),
                         )
                       ],
                     )
