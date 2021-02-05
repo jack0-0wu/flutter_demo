@@ -28,6 +28,7 @@ class StaticResource {
     "异步future Demo": "futureDemo",
     "异步stream Demo": "streamDemo",
     "streamBuilder Demo": "streamBuilderDemo",
+    "futureBuilder Demo": "futureBuilderDemo",
   };
 
   //测试用key

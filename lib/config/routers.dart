@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_demo/config/static_resource.dart';
+import 'package:flutter_demo/page/demo/asynchronous_demo/futureBuilder_demo.dart';
 import 'package:flutter_demo/page/demo/asynchronous_demo/future_demo.dart';
 import 'package:flutter_demo/page/demo/asynchronous_demo/streamBuilder_demo.dart';
 import 'package:flutter_demo/page/demo/asynchronous_demo/stream_demo.dart';
@@ -53,6 +54,7 @@ class Routers {
     'futureDemo': FutureDemo(),
     'streamDemo': StreamDemo(),
     'streamBuilderDemo': StreamBuilderDemo(),
+    'futureBuilderDemo':FutureBuilderDemo(),
     'globalKeyDemo': GlobalKeyDemo(key: StaticResource.testKey),
   };
 }
