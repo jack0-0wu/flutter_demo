@@ -7,7 +7,6 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/util/custom_widget.dart';
 
 class FutureBuilderDemo extends StatefulWidget {
   @override
@@ -15,6 +14,13 @@ class FutureBuilderDemo extends StatefulWidget {
 }
 
 class _FutureBuilderDemoState extends State<FutureBuilderDemo> {
+  Future<bool> _data;
+
+  @override
+  void initState() {
+    super.initState();
+    _data = fetchData();
+  }
   Future<bool> fetchData() => Future.delayed(Duration(seconds: 1), () {
         debugPrint('Step 2, fetch data');
         return true;
@@ -27,13 +33,25 @@ class _FutureBuilderDemoState extends State<FutureBuilderDemo> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      //future: fetchData2() ,
+      future: _data ,
       initialData: false,
       builder: (context, snapshot) {
+        if(snapshot.connectionState == ConnectionState.waiting){
+          return Scaffold(
+            body: Center(
+                child: Container(child: Text('waiting: ${snapshot.data}'))),
+          );
+        }
         if(snapshot.connectionState == ConnectionState.none){
           return Scaffold(
             body: Center(
                 child: Container(child: Text('none: ${snapshot.data}'))),
+          );
+        }
+        if(snapshot.connectionState == ConnectionState.done){
+          return Scaffold(
+            body: Center(
+                child: Container(child: Text('done: ${snapshot.data}'))),
           );
         }
         if(snapshot.hasError){
