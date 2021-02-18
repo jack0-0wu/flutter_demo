@@ -34,6 +34,7 @@ class _FutureBuilderDemoState extends State<FutureBuilderDemo> {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: _data ,
+      // future:fetchData(),
       initialData: false,
       builder: (context, snapshot) {
         if(snapshot.connectionState == ConnectionState.waiting){
