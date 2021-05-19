@@ -25,7 +25,7 @@ import 'package:flutter_demo/page/demo/responsiveness_demo/orientationBuilder_de
 import 'package:flutter_demo/page/demo/richtext_demo/richText_demo.dart';
 import 'package:flutter_demo/page/demo/router_demo/router_test.dart';
 import 'package:flutter_demo/page/demo/router_demo/router_test2.dart';
-import 'package:flutter_demo/page/demo/selector_demo/BottomAnimNavPage.dart';
+import 'package:flutter_demo/page/demo/selector_demo/bottom_anim_nav_page.dart';
 import 'package:flutter_demo/page/demo/today_food_demo/today_food_demo.dart';
 
 class Routers {
