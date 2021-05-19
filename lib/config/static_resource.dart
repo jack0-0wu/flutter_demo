@@ -29,6 +29,7 @@ class StaticResource {
     "异步stream Demo": "streamDemo",
     "streamBuilder Demo": "streamBuilderDemo",
     "futureBuilder Demo": "futureBuilderDemo",
+    "圆形选择器 Demo": "bottomAnimNavPage",
   };
 
   //测试用key
