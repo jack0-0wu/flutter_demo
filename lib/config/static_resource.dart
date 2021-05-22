@@ -30,6 +30,7 @@ class StaticResource {
     "streamBuilder Demo": "streamBuilderDemo",
     "futureBuilder Demo": "futureBuilderDemo",
     "圆形选择器 Demo": "bottomAnimNavPage",
+    "Ios风格的底部选择器 Demo": "iosBottomDemo",
   };
 
   //测试用key

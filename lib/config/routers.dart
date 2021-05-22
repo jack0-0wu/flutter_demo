@@ -13,6 +13,7 @@ import 'package:flutter_demo/page/demo/clipping_picture_demo/crop_demo.dart';
 import 'package:flutter_demo/page/demo/faker_demo/faker_demo.dart';
 import 'package:flutter_demo/page/demo/globalKey_demo/globalKey_demo.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
+import 'package:flutter_demo/page/demo/ios_bottom_demo/ios_bottom_demo.dart';
 import 'package:flutter_demo/page/demo/json_to_model_demo/json_to_model_demo.dart';
 import 'package:flutter_demo/page/demo/logger_demo/logger_demo.dart';
 import 'package:flutter_demo/page/demo/planfrom_demo/planform_channel_demo2.dart';
@@ -57,6 +58,7 @@ class Routers {
     'streamBuilderDemo': StreamBuilderDemo(),
     'futureBuilderDemo':FutureBuilderDemo(),
     'bottomAnimNavPage':BottomAnimNavPage(),
+    'iosBottomDemo':IosBottomDemo(),
     'globalKeyDemo': GlobalKeyDemo(key: StaticResource.testKey),
   };
 }
