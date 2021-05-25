@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/util/custom_widget.dart';
 
 /// Copyright (C), 2020-2020, flutter_demo
 /// FileName: expanded_flexiblew_demo
@@ -7,11 +8,11 @@ import 'package:flutter/material.dart';
 /// Date: 2020/12/6
 /// Description:
 
-
 class ExpandedFlexibleDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(title: "响应式 demo"),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
@@ -88,4 +89,3 @@ class FlexibleWidget extends StatelessWidget {
     );
   }
 }
- 

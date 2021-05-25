@@ -4,7 +4,6 @@ import 'package:flutter_demo/page/demo/asynchronous_demo/futureBuilder_demo.dart
 import 'package:flutter_demo/page/demo/asynchronous_demo/future_demo.dart';
 import 'package:flutter_demo/page/demo/asynchronous_demo/streamBuilder_demo.dart';
 import 'package:flutter_demo/page/demo/asynchronous_demo/stream_demo.dart';
-import 'package:flutter_demo/page/demo/calendar_demo/calendar_demo.dart';
 import 'package:flutter_demo/page/demo/camera_demo/camera_demo.dart';
 import 'package:flutter_demo/page/demo/clean_cache_demo/clean_cache_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture_demo/clipping_demo.dart';
@@ -13,9 +12,13 @@ import 'package:flutter_demo/page/demo/clipping_picture_demo/crop_demo.dart';
 import 'package:flutter_demo/page/demo/faker_demo/faker_demo.dart';
 import 'package:flutter_demo/page/demo/globalKey_demo/globalKey_demo.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
+import 'package:flutter_demo/page/demo/indicator_demo/indicator_demo.dart';
+import 'package:flutter_demo/page/demo/indicator_demo/indicator_demo2.dart';
 import 'package:flutter_demo/page/demo/ios_bottom_demo/ios_bottom_demo.dart';
 import 'package:flutter_demo/page/demo/json_to_model_demo/json_to_model_demo.dart';
 import 'package:flutter_demo/page/demo/logger_demo/logger_demo.dart';
+import 'package:flutter_demo/page/demo/pageView_demo/PageViewDemo.dart';
+import 'package:flutter_demo/page/demo/page_demo/PageDemo.dart';
 import 'package:flutter_demo/page/demo/planfrom_demo/planform_channel_demo2.dart';
 import 'package:flutter_demo/page/demo/responsiveness_demo/aspectRatio_demo.dart';
 import 'package:flutter_demo/page/demo/responsiveness_demo/expanded_flexible_demo.dart';
@@ -43,7 +46,6 @@ class Routers {
     'richTextDemo': RichTextDemo(),
     'loggerDemo': LoggerDemo(),
     'fakerDemo': FakerDemo(),
-    'calendarDemo': CalendarDemo(),
     'jsonToModelDemo': JsonToModelDemo(),
     'cleanCacheDemo': CleanCacheDemo(),
     'mediaQueryDemo': MediaQueryDemo(),
@@ -60,5 +62,9 @@ class Routers {
     'bottomAnimNavPage':BottomAnimNavPage(),
     'iosBottomDemo':IosBottomDemo(),
     'globalKeyDemo': GlobalKeyDemo(key: StaticResource.testKey),
+    'pageDemo':PageDemo(),
+    'pageViewDemo':PageViewDemo(),
+    'indicatorDemo':IndicatorDemo(),
+    'indicatorDemo2':IndicatorDemo2(),
   };
 }

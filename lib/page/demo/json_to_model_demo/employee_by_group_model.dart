@@ -9,9 +9,11 @@
 
 import 'dart:convert';
 
-EmployByGroupModel employByGroupModelFromJson(String str) => EmployByGroupModel.fromJson(json.decode(str));
+EmployByGroupModel employByGroupModelFromJson(String str) =>
+    EmployByGroupModel.fromJson(json.decode(str));
 
-String employByGroupModelToJson(EmployByGroupModel data) => json.encode(data.toJson());
+String employByGroupModelToJson(EmployByGroupModel data) =>
+    json.encode(data.toJson());
 
 class EmployByGroupModel {
   EmployByGroupModel({
@@ -24,17 +26,20 @@ class EmployByGroupModel {
   String groupId;
   List<PersonGroupList> personGroupList;
 
-  factory EmployByGroupModel.fromJson(Map<String, dynamic> json) => EmployByGroupModel(
-    groupName: json["groupName"],
-    groupId: json["groupId"],
-    personGroupList: List<PersonGroupList>.from(json["personGroupList"].map((x) => PersonGroupList.fromJson(x))),
-  );
+  factory EmployByGroupModel.fromJson(Map<String, dynamic> json) =>
+      EmployByGroupModel(
+        groupName: json["groupName"],
+        groupId: json["groupId"],
+        personGroupList: List<PersonGroupList>.from(
+            json["personGroupList"].map((x) => PersonGroupList.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "groupName": groupName,
-    "groupId": groupId,
-    "personGroupList": List<dynamic>.from(personGroupList.map((x) => x.toJson())),
-  };
+        "groupName": groupName,
+        "groupId": groupId,
+        "personGroupList":
+            List<dynamic>.from(personGroupList.map((x) => x.toJson())),
+      };
 }
 
 class PersonGroupList {
@@ -46,16 +51,14 @@ class PersonGroupList {
   String userName;
   String userId;
 
-  factory PersonGroupList.fromJson(Map<String, dynamic> json) => PersonGroupList(
-    userName: json["userName"],
-    userId: json["userId"],
-  );
+  factory PersonGroupList.fromJson(Map<String, dynamic> json) =>
+      PersonGroupList(
+        userName: json["userName"],
+        userId: json["userId"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "userName": userName,
-    "userId": userId,
-  };
+        "userName": userName,
+        "userId": userId,
+      };
 }
-
-
- 

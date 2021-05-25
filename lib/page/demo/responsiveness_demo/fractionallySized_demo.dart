@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/util/custom_widget.dart';
 
 /// Copyright (C), 2020-2020, flutter_demo
 /// FileName: fractionallySized_demo
@@ -11,6 +12,7 @@ class FractionallySizedDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(title: "响应式 demo"),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
@@ -20,7 +22,6 @@ class FractionallySizedDemo extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 FractionallySizedWidget(widthFactor: 0.4),
-
               ],
             ),
             Row(
@@ -75,5 +76,3 @@ class FractionallySizedWidget extends StatelessWidget {
     );
   }
 }
-
- 
