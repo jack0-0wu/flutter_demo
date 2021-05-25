@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/util/custom_widget.dart';
 
 /// Copyright (C), 2020-2020, flutter_demo
 /// FileName: aspectRatio_demo
@@ -10,6 +11,7 @@ class AspectRatioDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(title: "响应式 demo"),
       backgroundColor: Colors.white,
       body: ListView(
         children: [

@@ -28,7 +28,6 @@ class _FakerDemoState extends State<FakerDemo> {
     <dynamic>["faker.internet.email()", faker.internet.email()],
   ];
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,15 +39,17 @@ class _FakerDemoState extends State<FakerDemo> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                for(var item in fakeList)
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Font(text: "代码：${item[0]}"),
-                    Font(text: "输出：${item[1]}"),
-                    SizedBox(height: 20.s,)
-                  ],
-                )
+                for (var item in fakeList)
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Font(text: "代码：${item[0]}"),
+                      Font(text: "输出：${item[1]}"),
+                      SizedBox(
+                        height: 20.s,
+                      )
+                    ],
+                  )
               ],
             ),
           )

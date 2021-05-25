@@ -8,7 +8,6 @@ class RouterTest extends StatefulWidget {
 }
 
 class _RouterTestState extends State<RouterTest> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,13 +17,12 @@ class _RouterTestState extends State<RouterTest> {
       ),
       body: Center(
         child: Column(
-          children: [Button(
-            text: 'Go!',
-            onTap: (){
-              RouterUtil.push(
-                  routerName: "routerTest2", data: "66666");
-            }
-          )
+          children: [
+            Button(
+                text: 'Go!',
+                onTap: () {
+                  RouterUtil.push(routerName: "routerTest2", data: "66666");
+                })
           ],
         ),
       ),

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_demo/util/custom_widget.dart';
 
-
 class PlanFromTest extends StatefulWidget {
   @override
   _PlanFromTestState createState() => _PlanFromTestState();
@@ -29,20 +28,20 @@ class _PlanFromTestState extends State<PlanFromTest> {
       _batteryLevel = batteryLevel;
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Material(
-      child:  Center(
-        child:  Column(
+    return Material(
+      child: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Button(
-              text:'Get Battery Level',
-              onTap: (){
-                _getBatteryLevel();
-              }
-            ),
-             Text(_batteryLevel),
+                text: 'Get Battery Level',
+                onTap: () {
+                  _getBatteryLevel();
+                }),
+            Text(_batteryLevel),
           ],
         ),
       ),

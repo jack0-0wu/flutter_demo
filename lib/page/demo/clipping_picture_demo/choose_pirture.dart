@@ -26,9 +26,10 @@ class _ChoosePictureState extends State<ChoosePicture> {
       _image = File(pickedFile.path);
       RouterUtil.pushReplacementNamed(
           routerName: "clippingPicture",
-          data: {"path": pickedFile.path}, pushThen: (value) {
-        widget.push(value);
-      });
+          data: {"path": pickedFile.path},
+          pushThen: (value) {
+            widget.push(value);
+          });
     } else {
       print('No image selected.');
     }
@@ -41,9 +42,10 @@ class _ChoosePictureState extends State<ChoosePicture> {
       _image = File(pickedFile.path);
       RouterUtil.pushReplacementNamed(
           routerName: "clippingPicture",
-          data: {"path": pickedFile.path}, pushThen: (value) {
-        widget.push(value);
-      });
+          data: {"path": pickedFile.path},
+          pushThen: (value) {
+            widget.push(value);
+          });
     } else {
       print('No image selected.');
     }

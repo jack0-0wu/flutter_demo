@@ -54,7 +54,6 @@ class _CropDemoState extends State<CropDemo> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-
               FlatButton(
                 child: Text(
                   'Crop Image',

@@ -54,15 +54,13 @@ class _GlobalKeyDemoState extends State<GlobalKeyDemo> {
               text: "无context跳转",
               onTap: () {
                 print("${RouterUtil.routerGlobalKey}");
-                RouterUtil.routerGlobalKey.currentState
-                    .pushNamed("routerTest");
+                RouterUtil.routerGlobalKey.currentState.pushNamed("routerTest");
               }),
           Button(
               text: "使用key局部刷新",
               onTap: () {
                 globalKey.currentState.setState(() {});
               }),
-
         ],
       ),
     );

@@ -20,7 +20,7 @@ class _IndexState extends State<Index> {
         padding: EdgeInsets.all(20.s),
         child: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
+              crossAxisCount: 2,
               childAspectRatio: 1,
               crossAxisSpacing: 10.s,
               mainAxisSpacing: 10.s),
@@ -44,7 +44,6 @@ class _IndexState extends State<Index> {
             //     onTap: () {
             //       RouterUtil.push(context, routerName: "calendarDemo");
             //     }),
-
           ],
         ),
       ),

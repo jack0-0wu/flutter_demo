@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/util/custom_widget.dart';
 
 /// Copyright (C), 2020-2020, flutter_demo
 /// FileName: layoutBuilder_demo
@@ -12,6 +13,7 @@ class LayoutBuilderDemo extends StatelessWidget {
     Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
+      appBar: CustomAppBar(title: "响应式 demo"),
       body: Row(
         children: [
           Expanded(
@@ -51,5 +53,3 @@ class LayoutBuilderDemo extends StatelessWidget {
     );
   }
 }
-
- 

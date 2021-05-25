@@ -1,12 +1,6 @@
-一些flutter常用功能的例子
+一些flutter常用功能的例子：
+
+![](https://img-blog.csdnimg.cn/20210526000434531.jpg)
 
 
-
-
-
-[![rp0edx.png](https://s3.ax1x.com/2020/12/08/rp0edx.png)](https://imgchr.com/i/rp0edx)
-
-flutter sdk 1.20.4
-
-由于引入了很多不支持空安全的第三方插件，本项目不打算适配flutter 2。
 

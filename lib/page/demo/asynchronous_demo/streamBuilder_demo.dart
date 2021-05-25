@@ -22,7 +22,7 @@ class StreamBuilderDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Stream Demo'),
+        title: Text('StreamBuilder Demo'),
       ),
       body: Center(
         child: StreamBuilder(
