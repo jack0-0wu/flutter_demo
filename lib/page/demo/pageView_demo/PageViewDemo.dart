@@ -23,7 +23,7 @@ class _PageViewDemoState extends State<PageViewDemo> {
         width: 700.s,
         height: 700.s,
         child: PageView(
-          onPageChanged: (index){
+          onPageChanged: (index) {
             print(index);
           },
           children: [

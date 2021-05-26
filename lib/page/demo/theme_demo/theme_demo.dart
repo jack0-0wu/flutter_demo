@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/config/static_resource.dart';
@@ -26,7 +24,7 @@ class _ThemeDemoState extends State<ThemeDemo> {
     return Scaffold(
       appBar: AppBar(
         title: Font(
-            text: "主题demo",
+          text: "主题demo",
         ),
         backgroundColor: Theme.of(context).primaryColor,
         centerTitle: true,
@@ -34,9 +32,12 @@ class _ThemeDemoState extends State<ThemeDemo> {
       body: Column(
         children: [
           Container(
-            width: 100.s,
-            height: 100.s,
+            width: 150.s,
+            height: 150.s,
             color: Theme.of(context).primaryColor,
+          ),
+          SizedBox(
+            height: 20.s,
           ),
           Consumer<ThemeProvider>(
             builder: (context, ThemeProvider themeProvider, child) =>
@@ -45,15 +46,14 @@ class _ThemeDemoState extends State<ThemeDemo> {
                 themeProvider.changeTheme("customThemeData2");
               },
               child: Container(
-                width: 100.s,
-                height: 100.s,
+                width: 150.s,
+                height: 150.s,
                 color: Theme.of(context).primaryColor,
               ),
             ),
           )
         ],
       ),
-
     );
   }
 }

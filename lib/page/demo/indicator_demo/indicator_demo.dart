@@ -83,7 +83,6 @@ class _IndicatorDemoState extends State<IndicatorDemo> {
               controller: indexBarController,
             )
           ],
-        )
-    );
+        ));
   }
 }

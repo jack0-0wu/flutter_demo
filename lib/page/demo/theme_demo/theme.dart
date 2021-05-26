@@ -10,7 +10,7 @@ ThemeData customThemeData = ThemeData(
     //背景色
     backgroundColor: Color(0xFFF2F5FA),
     //主色 白色
-    primaryColor: Colors.white,
+    primaryColor:  Colors.white,
     //选中颜色  蓝色
     focusColor: Color(0xFF4E7BFE),
     //提示颜色 红色
@@ -35,9 +35,9 @@ ThemeData customThemeData = ThemeData(
 
 ThemeData customDarkThemeData = ThemeData(
     //背景色
-    backgroundColor: Colors.black,
+    backgroundColor: Color(0xFFF2F5FA),
     //主色 白色
-    primaryColor: Color(0xFF262626),
+    primaryColor: Colors.black,
     //选中颜色  蓝色
     focusColor: Color(0xFFFFE621),
     //提示颜色 红色
@@ -59,7 +59,6 @@ ThemeData customDarkThemeData = ThemeData(
         fontWeight: FontWeight.bold,
       ),
     ));
-
 
 Map themeMap = {
   "customThemeData": customThemeData,

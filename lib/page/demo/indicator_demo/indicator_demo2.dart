@@ -62,7 +62,6 @@ class _IndicatorDemo2State extends State<IndicatorDemo2> {
                     setState(() {});
                     print(index);
                     HapticFeedback.mediumImpact();
-
                   }
                 },
                 onHorizontalDragUpdate: (DragUpdateDetails details) {
@@ -75,7 +74,6 @@ class _IndicatorDemo2State extends State<IndicatorDemo2> {
                     setState(() {});
                     print(index);
                     HapticFeedback.mediumImpact();
-
                   }
                 },
                 onHorizontalDragEnd: (DragEndDetails details) {

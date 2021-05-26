@@ -18,7 +18,9 @@ Future<void> main() async {
 // Obtain a list of the available cameras on the device.
   final cameras = await availableCameras();
 
-  runApp(MyApp()
+  runApp(MultiProvider(
+          providers: [ChangeNotifierProvider(create: (_) => ThemeProvider())],
+          child: MyApp())
       //多屏幕展示
       // DevicePreview(
       //   enabled: !kReleaseMode,

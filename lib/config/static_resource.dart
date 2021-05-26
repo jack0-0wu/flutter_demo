@@ -43,7 +43,6 @@ class StaticResource {
   //测试用key
   static final GlobalKey testKey = GlobalKey();
 
-
   //
   static ThemeData customThemeData = ThemeData(
     primaryColor: Colors.blue,
@@ -53,11 +52,11 @@ class StaticResource {
     primaryColor: Colors.black,
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
-  static getSuccess(){
+  static getSuccess() {
     return Color(0xFF28a745);
   }
-
 }
+
 extension CustomColorScheme on ThemeData {
   Color get success => StaticResource.getSuccess();
   Color get info => const Color(0xFF17a2b8);

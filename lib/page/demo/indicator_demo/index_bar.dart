@@ -188,7 +188,7 @@ class IndexBarController {
 class IndexBar extends StatefulWidget {
   IndexBar({
     Key key,
-    this.data ,
+    this.data,
     this.width = kIndexBarWidth,
     this.height,
     this.itemHeight = kIndexBarItemHeight,
@@ -249,8 +249,7 @@ class _IndexBarState extends State<IndexBar> {
 
   void _valueChanged() {
     if (widget.indexBarDragNotifier == null) return;
-    IndexBarDragDetails details =
-        widget.indexBarDragNotifier.dragDetails.value;
+    IndexBarDragDetails details = widget.indexBarDragNotifier.dragDetails.value;
     selectIndex = details.index;
     indexTag = details.tag;
     action = details.action;
