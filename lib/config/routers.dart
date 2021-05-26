@@ -30,6 +30,7 @@ import 'package:flutter_demo/page/demo/richtext_demo/richText_demo.dart';
 import 'package:flutter_demo/page/demo/router_demo/router_test.dart';
 import 'package:flutter_demo/page/demo/router_demo/router_test2.dart';
 import 'package:flutter_demo/page/demo/selector_demo/bottom_anim_nav_page.dart';
+import 'package:flutter_demo/page/demo/theme_demo/theme_demo.dart';
 import 'package:flutter_demo/page/demo/today_food_demo/today_food_demo.dart';
 
 class Routers {
@@ -66,5 +67,6 @@ class Routers {
     'pageViewDemo':PageViewDemo(),
     'indicatorDemo':IndicatorDemo(),
     'indicatorDemo2':IndicatorDemo2(),
+    'themeDemo':ThemeDemo(),
   };
 }

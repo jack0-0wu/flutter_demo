@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'util.dart';
 
 //字体
-Font(
+Widget Font(
         {text = "",
         color = Colors.black,
         size = 30,
@@ -23,7 +23,7 @@ Font(
           decoration: decoration),
     );
 //按钮
-Button(
+Widget Button(
         {width,
         height,
         text = "",
@@ -44,7 +44,7 @@ Button(
       ),
     );
 
-CustomAppBar(
+Widget CustomAppBar(
         {String title = "无标题", textColor = Colors.white, titleSize = 100}) =>
     AppBar(
       title: Font(
