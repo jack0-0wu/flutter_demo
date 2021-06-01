@@ -17,6 +17,7 @@ import 'package:flutter_demo/page/demo/indicator_demo/indicator_demo2.dart';
 import 'package:flutter_demo/page/demo/ios_bottom_demo/ios_bottom_demo.dart';
 import 'package:flutter_demo/page/demo/json_to_model_demo/json_to_model_demo.dart';
 import 'package:flutter_demo/page/demo/logger_demo/logger_demo.dart';
+import 'package:flutter_demo/page/demo/num_animation_demo/num_animation_demo.dart';
 import 'package:flutter_demo/page/demo/pageView_demo/PageViewDemo.dart';
 import 'package:flutter_demo/page/demo/page_demo/PageDemo.dart';
 import 'package:flutter_demo/page/demo/planfrom_demo/planform_channel_demo2.dart';
@@ -68,5 +69,6 @@ class Routers {
     'indicatorDemo': IndicatorDemo(),
     'indicatorDemo2': IndicatorDemo2(),
     'themeDemo': ThemeDemo(),
+    'numAnimationDemo': NumAnimationDemo(),
   };
 }

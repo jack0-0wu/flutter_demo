@@ -9,10 +9,8 @@ import 'package:flutter/material.dart';
 class StaticResource {
   //首页demoMap
   static final Map<String, String> demoMap = {
-    // "image_crop包Demo": "cropDemo",
-    // "图片上传剪裁demo": "clippingDemo",
-    // "自定义拍照画面Demo": "cameraDemo",
-    // "通道测试代码"："planFromTest",
+
+    "数字变换动画": "numAnimationDemo",
     "更换主题": "themeDemo",
     "今天吃什么？": "todayFoodDemo",
     "路由工具类测试": "routerTest",
@@ -38,6 +36,10 @@ class StaticResource {
     "官方分页组件": "pageViewDemo",
     "指示器组件": "indicatorDemo",
     "横向指示器组件": "indicatorDemo2",
+    // "image_crop包Demo": "cropDemo",
+    // "图片上传剪裁demo": "clippingDemo",
+    // "自定义拍照画面Demo": "cameraDemo",
+    // "通道测试代码"："planFromTest",
   };
 
   //测试用key
