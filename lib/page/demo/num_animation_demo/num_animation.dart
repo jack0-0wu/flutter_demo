@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 
 class AnimText extends StatefulWidget {
 
-  final int number;
+  final int beginNumber;
+  final int endNumber;
   final int duration;
   final Color fontColor;
   final double fontSize;
 
   const AnimText({
     Key key,
-    this.number,
+    this.beginNumber,
+    this.endNumber,
     this.duration,
     this.fontColor,
     this.fontSize,
@@ -25,7 +27,6 @@ class AnimState extends State<AnimText> with SingleTickerProviderStateMixin {
 
   AnimationController controller;
   Animation animation;
-  var begin=0;
 
   @override
   void initState() {
@@ -33,7 +34,7 @@ class AnimState extends State<AnimText> with SingleTickerProviderStateMixin {
     controller = AnimationController(
         vsync: this, duration: Duration(milliseconds: widget.duration));
     final Animation curve=CurvedAnimation(parent: controller,curve: Curves.linear);
-    animation = IntTween(begin: begin, end: widget.number).animate(curve)..addStatusListener((status) {
+    animation = IntTween(begin: widget.beginNumber, end: widget.endNumber).animate(curve)..addStatusListener((status) {
       if(status==AnimationStatus.completed){
 //         controller.reverse();
       }

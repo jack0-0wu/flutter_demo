@@ -2,7 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/page/demo/num_animation_demo/widget.dart';
+import 'package:flutter_demo/page/demo/num_animation_demo/num_animation.dart';
 import 'package:flutter_demo/util/custom_widget.dart';
 
 /**
@@ -18,7 +18,8 @@ class NumAnimationDemo extends StatefulWidget {
 }
 
 class _NumAnimationDemoState extends State<NumAnimationDemo> {
-  UniqueKey key = UniqueKey();
+  Key key = UniqueKey();
+  Key key2 = UniqueKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +27,12 @@ class _NumAnimationDemoState extends State<NumAnimationDemo> {
       body: Column(
         children: [
           SizedBox(height: 100,),
-          AnimText(number: 10,duration:1000,key: key,),
+          AnimText(endNumber: 10,beginNumber: 0,duration:1000,key: key,),
+          AnimText(endNumber: 100,beginNumber: 90,duration:1000,key: key2,),
           GestureDetector(
             onTap: (){
               key =  UniqueKey();
+              key2 =  UniqueKey();
               setState(() {
 
               });
