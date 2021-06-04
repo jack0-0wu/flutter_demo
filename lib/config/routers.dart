@@ -33,6 +33,9 @@ import 'package:flutter_demo/page/demo/router_demo/router_test2.dart';
 import 'package:flutter_demo/page/demo/selector_demo/bottom_anim_nav_page.dart';
 import 'package:flutter_demo/page/demo/theme_demo/theme_demo.dart';
 import 'package:flutter_demo/page/demo/today_food_demo/today_food_demo.dart';
+import 'package:flutter_demo/page/demo/ui_demo/ui_demo.dart';
+import 'package:flutter_demo/page/demo/ui_demo/ui_demo2.dart';
+import 'package:flutter_demo/page/demo/ui_demo/ui_demo3.dart';
 
 class Routers {
   //路由表
@@ -70,5 +73,8 @@ class Routers {
     'indicatorDemo2': IndicatorDemo2(),
     'themeDemo': ThemeDemo(),
     'numAnimationDemo': NumAnimationDemo(),
+    'UIDemo': UIDemo(),
+    'UIDemo2': UIDemo2(),
+    'UIDemo3': UIDemo3(),
   };
 }

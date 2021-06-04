@@ -10,6 +10,9 @@ class StaticResource {
   //首页demoMap
   static final Map<String, String> demoMap = {
 
+    "布局demo3": "UIDemo3",
+    "布局demo2": "UIDemo2",
+    "布局demo": "UIDemo",
     "数字变换动画": "numAnimationDemo",
     "更换主题": "themeDemo",
     "今天吃什么？": "todayFoodDemo",
