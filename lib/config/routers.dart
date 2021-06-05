@@ -14,6 +14,7 @@ import 'package:flutter_demo/page/demo/globalKey_demo/globalKey_demo.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
 import 'package:flutter_demo/page/demo/indicator_demo/indicator_demo.dart';
 import 'package:flutter_demo/page/demo/indicator_demo/indicator_demo2.dart';
+import 'package:flutter_demo/page/demo/inspector_demo/inspector_demo.dart';
 import 'package:flutter_demo/page/demo/ios_bottom_demo/ios_bottom_demo.dart';
 import 'package:flutter_demo/page/demo/json_to_model_demo/json_to_model_demo.dart';
 import 'package:flutter_demo/page/demo/logger_demo/logger_demo.dart';
@@ -36,6 +37,7 @@ import 'package:flutter_demo/page/demo/today_food_demo/today_food_demo.dart';
 import 'package:flutter_demo/page/demo/ui_demo/ui_demo.dart';
 import 'package:flutter_demo/page/demo/ui_demo/ui_demo2.dart';
 import 'package:flutter_demo/page/demo/ui_demo/ui_demo3.dart';
+import 'package:flutter_demo/page/demo/widget_to_image_demo/widget_to_image_demo.dart';
 
 class Routers {
   //路由表
@@ -76,5 +78,9 @@ class Routers {
     'UIDemo': UIDemo(),
     'UIDemo2': UIDemo2(),
     'UIDemo3': UIDemo3(),
+    'example1': Example1(),
+    'example2': Example2(),
+    'example3': Example3(),
+    'widgetToImageDemo': WidgetToImageDemo(),
   };
 }

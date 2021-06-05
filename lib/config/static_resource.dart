@@ -9,10 +9,7 @@ import 'package:flutter/material.dart';
 class StaticResource {
   //首页demoMap
   static final Map<String, String> demoMap = {
-
-    "布局demo3": "UIDemo3",
-    "布局demo2": "UIDemo2",
-    "布局demo": "UIDemo",
+    "widget转图片": "widgetToImageDemo",
     "数字变换动画": "numAnimationDemo",
     "更换主题": "themeDemo",
     "今天吃什么？": "todayFoodDemo",
@@ -29,8 +26,6 @@ class StaticResource {
     "响应式布局相关组件 Demo5": "fractionallySizedDemo",
     "响应式布局相关组件 Demo6": "aspectRatioDemo",
     "指定路由key Demo": "globalKeyDemo",
-    "异步future Demo": "futureDemo",
-    "异步stream Demo": "streamDemo",
     "streamBuilder Demo": "streamBuilderDemo",
     "futureBuilder Demo": "futureBuilderDemo",
     "圆形选择器 Demo": "bottomAnimNavPage",
@@ -39,6 +34,14 @@ class StaticResource {
     "官方分页组件": "pageViewDemo",
     "指示器组件": "indicatorDemo",
     "横向指示器组件": "indicatorDemo2",
+    // "异步future Demo": "futureDemo",
+    // "异步stream Demo": "streamDemo",
+    // "调试工具测试3": "example3",
+    // "调试工具测试2": "example2",
+    // "调试工具测试1": "example1",
+    // "布局demo3": "UIDemo3",
+    // "布局demo2": "UIDemo2",
+    // "布局demo": "UIDemo",
     // "image_crop包Demo": "cropDemo",
     // "图片上传剪裁demo": "clippingDemo",
     // "自定义拍照画面Demo": "cameraDemo",

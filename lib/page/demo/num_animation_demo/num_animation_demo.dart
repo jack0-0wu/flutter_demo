@@ -28,7 +28,7 @@ class _NumAnimationDemoState extends State<NumAnimationDemo> {
         children: [
           SizedBox(height: 100,),
           AnimText(endNumber: 10,beginNumber: 0,duration:1000,key: key,),
-          AnimText(endNumber: 100,beginNumber: 90,duration:1000,key: key2,),
+          AnimText(endNumber: 190,beginNumber: 100,duration:1000,key: key2,),
           GestureDetector(
             onTap: (){
               key =  UniqueKey();
