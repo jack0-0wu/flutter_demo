@@ -32,6 +32,7 @@ class ThemeProvider with ChangeNotifier {
   }
 }
 
+//context可选参数
 Color getPrimaryColor() =>
     Theme.of(RouterUtil.routerGlobalKey.currentContext).primaryColor;
 
@@ -53,7 +54,7 @@ abstract class AppTheme {
 
 class DefaultTheme extends AppTheme {
   final Color backgroundColor = Colors.black;
-  final Color primaryColor = Colors.grey;
+  final Color primaryColor = Colors.lightGreen;
   final TextStyle titleStyle = TextStyle(
     fontSize: 42.s,
     fontWeight: FontWeight.bold,

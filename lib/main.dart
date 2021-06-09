@@ -1,14 +1,9 @@
-import 'package:camera/camera.dart';
-
 // import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
 import 'package:flutter_demo/page/demo/theme_demo/theme_provider.dart';
 import 'package:flutter_demo/util/router_util.dart';
 import 'package:provider/provider.dart';
-
-import 'config/static_resource.dart';
 
 Future<void> main() async {
   // Ensure that plugin services are initialized so that `availableCameras()`
@@ -16,7 +11,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
 // Obtain a list of the available cameras on the device.
-  final cameras = await availableCameras();
+//   final cameras = await availableCameras();
 
   runApp(MultiProvider(
           providers: [ChangeNotifierProvider(create: (_) => ThemeProvider())],

@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/demo/num_animation_demo/num_animation.dart';
@@ -23,19 +21,29 @@ class _NumAnimationDemoState extends State<NumAnimationDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  CustomAppBar(title: "数字变换Demo"),
+      appBar: CustomAppBar(title: "数字变换Demo"),
       body: Column(
         children: [
-          SizedBox(height: 100,),
-          AnimText(endNumber: 10,beginNumber: 0,duration:1000,key: key,),
-          AnimText(endNumber: 190,beginNumber: 100,duration:1000,key: key2,),
+          SizedBox(
+            height: 100,
+          ),
+          AnimText(
+            endNumber: 10,
+            beginNumber: 0,
+            duration: 1000,
+            key: key,
+          ),
+          AnimText(
+            endNumber: 190,
+            beginNumber: 100,
+            duration: 1000,
+            key: key2,
+          ),
           GestureDetector(
-            onTap: (){
-              key =  UniqueKey();
-              key2 =  UniqueKey();
-              setState(() {
-
-              });
+            onTap: () {
+              key = UniqueKey();
+              key2 = UniqueKey();
+              setState(() {});
             },
             child: Container(
               width: 100,

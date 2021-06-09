@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 class StaticResource {
   //首页demoMap
   static final Map<String, String> demoMap = {
+    "手势组件": "gesturesDemo",
     "形状变换动画": "animatedContainerDemo",
     "文字淡入动画": "fadeInDemo",
     "widget转图片": "widgetToImageDemo",
@@ -32,8 +33,8 @@ class StaticResource {
     "futureBuilder Demo": "futureBuilderDemo",
     "圆形选择器 Demo": "bottomAnimNavPage",
     "Ios风格的底部选择器 Demo": "iosBottomDemo",
-    "自定义横向分页": "pageDemo",
-    "官方分页组件": "pageViewDemo",
+    "自定义横向Tab": "pageDemo",
+    "官方Tab组件": "pageViewDemo",
     "指示器组件": "indicatorDemo",
     "横向指示器组件": "indicatorDemo2",
     // "异步future Demo": "futureDemo",

@@ -19,16 +19,23 @@ class _UIDemo3State extends State<UIDemo3> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/image/shuji.png",width: 50,),
+              Image.asset(
+                "assets/image/shuji.png",
+                width: 50,
+              ),
               Column(
                 children: [
                   Text(
                     "Flutter McFlutter",
-                    style: TextStyle(fontSize: 30,),
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
                   ),
                   Text(
                     "Experienced App Developer",
@@ -38,7 +45,9 @@ class _UIDemo3State extends State<UIDemo3> {
               )
             ],
           ),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

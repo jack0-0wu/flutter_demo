@@ -1,9 +1,10 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/util/custom_widget.dart';
-const owl_url = 'https://raw.githubusercontent.com/flutter/website/master/src/images/owl.jpg';
+
+const owl_url =
+    'https://raw.githubusercontent.com/flutter/website/master/src/images/owl.jpg';
+
 /**
  * @author wu chao
  * @project flutter_demo
@@ -26,7 +27,7 @@ class _FadeInDemoState extends State<FadeInDemo> {
             'Show details',
             style: TextStyle(color: Colors.blueAccent),
           ),
-          onPressed: () => setState((){
+          onPressed: () => setState(() {
             opacity = 1;
           }),
         ),

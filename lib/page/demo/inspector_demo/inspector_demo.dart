@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/util/custom_widget.dart';
@@ -25,6 +24,7 @@ class MenuItem extends StatelessWidget {
     );
   }
 }
+
 // Problem 1: Overflow error
 class Example1 extends StatelessWidget {
   @override
@@ -84,7 +84,9 @@ class Example3 extends StatelessWidget {
       appBar: CustomAppBar(title: "调试工具测试"),
       body: Column(
         children: [
-          SizedBox(height: 100,),
+          SizedBox(
+            height: 100,
+          ),
           SizedBox(
             height: 50,
             child: Row(

@@ -48,7 +48,7 @@ class _WidgetToImageDemoState extends State<WidgetToImageDemo> {
     await showDialog(
         context: context,
         builder: (context) => Scaffold(
-          body: Container(
+              body: Container(
                 padding: EdgeInsets.zero,
                 color: Colors.white,
                 child: Column(
@@ -60,7 +60,7 @@ class _WidgetToImageDemoState extends State<WidgetToImageDemo> {
                   ],
                 ),
               ),
-        ));
+            ));
   }
 
   @override

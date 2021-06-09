@@ -6,6 +6,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/util/custom_widget.dart';
 
 double randomBorderRadius() {
   return Random().nextDouble() * 64;
@@ -49,10 +50,13 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(title: "容器形状变换动画"),
       body: Center(
         child: Column(
           children: <Widget>[
-            SizedBox(height: 100,),
+            SizedBox(
+              height: 100,
+            ),
             SizedBox(
               width: 128,
               height: 128,
@@ -69,7 +73,6 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
                 ),
               ),
             ),
-
             ElevatedButton(
               child: Text('change'),
               onPressed: () => change(),

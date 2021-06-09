@@ -26,80 +26,87 @@ class _ThemeDemoState extends State<ThemeDemo> {
         title: Font(
           text: "主题demo",
         ),
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.lightGreen,
         centerTitle: true,
       ),
       body: Column(
         children: [
-          Container(
-            width: 150.s,
-            height: 150.s,
-            color: Theme.of(context).primaryColor,
-            child: Font(text: "11"),
-          ),
           SizedBox(
             height: 20.s,
           ),
-          Container(
-            width: 150.s,
-            height: 150.s,
-            color: Theme.of(RouterUtil.routerGlobalKey.currentContext)
-                .primaryColor,
-            child: Font(text: "22"),
-          ),
-          SizedBox(
-            height: 20.s,
-          ),
-          Container(
-            width: 150.s,
-            height: 150.s,
-            color: getPrimaryColor(),
-            child: Font(text: "22"),
-          ),
-          SizedBox(
-            height: 20.s,
-          ),
-          Consumer<ThemeProvider>(
-            builder: (context, ThemeProvider themeProvider, child) =>
-                GestureDetector(
-              onTap: () {
-                themeProvider.changeTheme(Theme2());
-              },
-              child: Container(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
                 width: 150.s,
                 height: 150.s,
                 color: Theme.of(context).primaryColor,
-                child: Font(text: "33"),
+                child: Font(text: "主题色容器"),
               ),
-            ),
-          ),
-          Consumer<ThemeProvider>(
-            builder: (context, ThemeProvider themeProvider, child) =>
-                GestureDetector(
-              onTap: () {
-                themeProvider.changeTheme(Theme3());
-              },
-              child: Container(
+              Container(
                 width: 150.s,
                 height: 150.s,
-                color: Theme.of(context).primaryColor,
-                child: Font(text: "33"),
+                color: Theme.of(RouterUtil.routerGlobalKey.currentContext)
+                    .primaryColor,
+                child: Font(text: "主题色容器"),
               ),
-            ),
+              Container(
+                width: 150.s,
+                height: 150.s,
+                color: getPrimaryColor(),
+                child: Font(text: "主题色容器"),
+              ),
+            ],
           ),
-          Consumer<ThemeProvider>(
-            builder: (context, ThemeProvider themeProvider, child) =>
-                GestureDetector(
+          SizedBox(
+            height: 20.s,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Consumer<ThemeProvider>(
+                builder: (context, ThemeProvider themeProvider, child) =>
+                    GestureDetector(
                   onTap: () {
                     themeProvider.changeTheme(Theme1());
                   },
                   child: Container(
                     width: 150.s,
                     height: 150.s,
-                    color: Theme.of(context).primaryColor,
-                    child: Font(text: "33"),
+                    color: Theme1().primaryColor,
+                    child: Font(text: "更换主题Theme1"),
                   ),
                 ),
+              ),
+              Consumer<ThemeProvider>(
+                builder: (context, ThemeProvider themeProvider, child) =>
+                    GestureDetector(
+                  onTap: () {
+                    themeProvider.changeTheme(Theme2());
+                  },
+                  child: Container(
+                    width: 150.s,
+                    height: 150.s,
+                    color: Theme2().primaryColor,
+                    child: Font(text: "更换主题Theme2"),
+                  ),
+                ),
+              ),
+              Consumer<ThemeProvider>(
+                builder: (context, ThemeProvider themeProvider, child) =>
+                    GestureDetector(
+                  onTap: () {
+                    themeProvider.changeTheme(Theme3());
+                  },
+                  child: Container(
+                    width: 150.s,
+                    height: 150.s,
+                    color: Theme3().primaryColor,
+                    child: Font(text: "更换主题Theme3"),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
