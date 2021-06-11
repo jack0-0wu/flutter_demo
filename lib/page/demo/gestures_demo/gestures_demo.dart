@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/util/util.dart';
 
-import 'GradientCircularProgressIndicator.dart';
-
 /// @author wu chao
 /// @project flutter_demo
 /// @date 2021/6/8
@@ -20,12 +18,13 @@ class _GesturesDemoState extends State<GesturesDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         appBar: CustomAppBar(title: "手势demo"),
         body: Center(
           child: Gestures(
-            total: 10,
-            nowNum: 1,
-            doneFlag: 1 == 10,
+            total: 5,
+            nowNum: 0,
+            doneFlag: 0 == 5,
             content: "zhen bu cuo",
           ),
         ));
@@ -106,9 +105,9 @@ class Gestures extends StatefulWidget {
       @required this.doneFlag,
       this.forwardTime = 1000,
       this.reverseTime = 400,
-      this.size = 315,
+      this.size = 280,
       this.iconSize = 90,
-      this.circularColor = Colors.lightGreen,
+      this.circularColor = Colors.blueAccent,
       this.circularBgColor = Colors.grey});
 }
 
@@ -176,64 +175,120 @@ class _GesturesState extends State<Gestures> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     //switch类型
     return GestureDetector(
-      child: Stack(
-        children: [
-          Container(
-            width: widget.size.s,
-            height: widget.size.s,
-            alignment: Alignment.center,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.opacity,
-                    size: widget.iconSize.s,
-                    color: widget.doneFlag
-                        ? widget.doneIconColor
-                        : widget.undoneIconColor),
-                SizedBox(height: 35.s),
-                Text(
-                  widget.content,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30.s,
-                      color: widget.doneFlag
-                          ? widget.doneTextColor
-                          : widget.undoneTextColor),
+      child: Container(
+        width: 315.s,
+        height: 315.s,
+        child: Stack(
+          children: [
+            Positioned(
+              left: -25.s,
+              top: -25.s,
+              child: ClipRRect(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                clipper: MyClipper(conSize: 315, strokeWidth: 18),
+                child: CustomPaint(
+                  size: Size(315.s, 315.s),
+                  painter: ProgressBar(
+                      percent: widget.nowNum / widget.total,
+                      conSize: 315,
+                      strokeWidth: 18),
                 ),
-                SizedBox(height: 15.s),
-                Text(
-                  "${widget.nowNum}/${widget.total}",
-                  style: TextStyle(
-                      color: widget.doneFlag
-                          ? widget.doneText2Color
-                          : widget.undoneText2Color,
-                      fontSize: 24.s),
+              ),
+            ),
+            Positioned(
+              left: -5.s,
+              top: -5.s,
+              child: ClipRRect(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                clipper: AnimationClipper(conSize: 260),
+                child: CustomPaint(
+                  size: Size(260.s, 260.s),
+                  painter: AnimationProgressBar(
+                      percent: widget.doneFlag
+                          ? (animationDoneController != null
+                              ? animationDoneController.value
+                              : 0)
+                          : (animationController != null
+                              ? animationController.value
+                              : 0),
+                      conSize: 260,
+                      strokeWidth: 6,
+                      containerColor:
+                          widget.doneFlag ? Colors.blueAccent : Colors.white,
+                      lineColor:
+                          widget.doneFlag ? Colors.white : Colors.blueAccent),
                 ),
-              ],
+              ),
             ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(60.s),
-              color: widget.doneFlag ? widget.doneColor : widget.undoneColor,
+
+            Positioned(
+              left: 40.s,
+              top: 40.s,
+              child: Container(
+                width: (315 - 80).s,
+                height: (315 - 80).s,
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.opacity,
+                      size: widget.iconSize.s,
+                      color: widget.doneFlag
+                          ? widget.doneIconColor
+                          : widget.undoneIconColor,
+                    ),
+                    SizedBox(height: 35.s),
+                    Text(
+                      widget.content,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30.s,
+                          color: widget.doneFlag
+                              ? widget.doneTextColor
+                              : widget.undoneTextColor),
+                    ),
+                    SizedBox(height: 15.s),
+                    Text(
+                      "${widget.nowNum}/${widget.total}",
+                      style: TextStyle(
+                          color: widget.doneFlag
+                              ? widget.doneText2Color
+                              : widget.undoneText2Color,
+                          fontSize: 24.s),
+                    ),
+                  ],
+                ),
+                decoration: BoxDecoration(
+                  color:
+                      widget.doneFlag ? widget.doneColor : widget.undoneColor,
+                  borderRadius: BorderRadius.circular(52.s),
+                ),
+              ),
             ),
-          ),
-          Visibility(
-            visible: showFlag,
-            child: GradientCircularProgressIndicator(
-                colors: [widget.circularColor, widget.circularColor],
-                radius: 155.s,
-                backgroundColor: widget.circularBgColor,
-                // backgroundColor: backgroundColor,
-                strokeWidth: 20.s,
-                strokeCapRound: true,
-                value: widget.doneFlag
-                    ? (animationDoneController != null
-                        ? animationDoneController.value
-                        : 0)
-                    : (animationController != null
-                        ? animationController.value
-                        : 0)),
-          ),
-        ],
+            // Positioned(
+            //   left: 25.s,
+            //   top: 22.s,
+            //   child: Visibility(
+            //     visible: showFlag,
+            //     child: GradientCircularProgressIndicator(
+            //         colors: [widget.circularColor, widget.circularColor],
+            //         radius: 130.s,
+            //         backgroundColor: Colors.white,
+            //         // backgroundColor: backgroundColor,
+            //         strokeWidth: 10.s,
+            //         strokeCapRound: true,
+            //         value: widget.doneFlag
+            //             ? (animationDoneController != null
+            //                 ? animationDoneController.value
+            //                 : 0)
+            //             : (animationController != null
+            //                 ? animationController.value
+            //                 : 0)),
+            //   ),
+            // ),
+          ],
+        ),
       ),
       onTap: () {
         if (widget.doneFlag) return;
@@ -279,4 +334,144 @@ class _GesturesState extends State<Gestures> with TickerProviderStateMixin {
       },
     );
   }
+}
+
+class ProgressBar extends CustomPainter {
+  num conSize;
+
+  num strokeWidth;
+
+  num percent;
+
+  ProgressBar({this.percent, this.conSize, this.strokeWidth});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    //大小变化时参数需要调整
+    num myOffset = strokeWidth * 2.4;
+    //大小变化时参数需要调整
+    num cir = conSize + myOffset * 1.2;
+    num con = conSize + myOffset - (strokeWidth * 2);
+
+    var paint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth.s
+      ..color = Colors.blueAccent;
+    var paint2 = Paint()
+      ..style = PaintingStyle.fill
+      ..strokeWidth = strokeWidth.s
+      ..color = Color(0XFFF2F5FA);
+    canvas.drawRRect(
+      RRect.fromLTRBR(
+          myOffset.s, myOffset.s, con.s, con.s, Radius.circular(63.s)),
+      paint,
+    );
+    canvas.drawArc(
+      Rect.fromLTRB(0, 0, cir.s, cir.s),
+      3.14 * (1.5 + (percent * 2)),
+      3.14 * (2 - (percent * 2)),
+      true,
+      paint2,
+    );
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    return true;
+  }
+}
+
+class MyClipper extends CustomClipper<RRect> {
+  num conSize;
+  num strokeWidth;
+
+  MyClipper({this.conSize, this.strokeWidth});
+
+  @override
+  RRect getClip(Size size) {
+    num myOffset = strokeWidth * 2.4;
+    num con = conSize + myOffset - (strokeWidth * 2);
+    return RRect.fromLTRBR(
+        myOffset.s - strokeWidth / 4.2,
+        myOffset.s - strokeWidth / 4.2,
+        con.s + strokeWidth / 4.2,
+        con.s + strokeWidth / 4.2,
+        Radius.circular(60.s));
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<RRect> oldClipper) => false;
+}
+
+class AnimationProgressBar extends CustomPainter {
+  num conSize;
+
+  num strokeWidth;
+
+  num percent;
+
+  Color containerColor;
+  Color lineColor;
+
+  AnimationProgressBar(
+      {this.percent,
+      this.conSize,
+      this.strokeWidth,
+      this.containerColor,
+      this.lineColor});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    //偏移量 大小变化时参数需要调整
+    num myOffset = strokeWidth * 6.4;
+    //圆大小 大小变化时参数需要调整
+    num cir = conSize + myOffset * 1.7;
+    //方块大小
+    num con = conSize + myOffset - (strokeWidth * 2);
+    var paint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth.s
+      ..color = lineColor;
+    var paint2 = Paint()
+      ..style = PaintingStyle.fill
+      ..strokeWidth = strokeWidth.s
+      ..color = containerColor;
+    canvas.drawRRect(
+      RRect.fromLTRBR(
+          myOffset.s, myOffset.s, con.s, con.s, Radius.circular(55.s)),
+      paint,
+    );
+    canvas.drawArc(
+      Rect.fromLTRB(0, 0, cir.s, cir.s),
+      3.14 * (1.5 + (percent * 2)),
+      3.14 * (2 - (percent * 2)),
+      true,
+      paint2,
+    );
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    return true;
+  }
+}
+
+class AnimationClipper extends CustomClipper<RRect> {
+  num conSize;
+
+  AnimationClipper({this.conSize});
+
+  @override
+  RRect getClip(Size size) {
+    num myOffset = 32;
+    return RRect.fromLTRBR(
+        myOffset.s,
+        myOffset.s ,
+        (conSize + 1.5 + myOffset).s,
+        (conSize + 1.5 + myOffset).s,
+        Radius.circular(55.s));
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<RRect> oldClipper) => false;
 }
