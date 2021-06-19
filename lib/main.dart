@@ -1,6 +1,7 @@
 // import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
+import 'package:flutter_demo/page/demo/test_demo/favorites.dart';
 import 'package:flutter_demo/page/demo/theme_demo/theme_provider.dart';
 import 'package:flutter_demo/util/router_util.dart';
 import 'package:provider/provider.dart';
@@ -13,9 +14,10 @@ Future<void> main() async {
 // Obtain a list of the available cameras on the device.
 //   final cameras = await availableCameras();
 
-  runApp(MultiProvider(
-          providers: [ChangeNotifierProvider(create: (_) => ThemeProvider())],
-          child: MyApp())
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (_) => ThemeProvider()),
+    ChangeNotifierProvider(create: (_) => Favorites()),
+  ], child: MyApp())
       //多屏幕展示
       // DevicePreview(
       //   enabled: !kReleaseMode,

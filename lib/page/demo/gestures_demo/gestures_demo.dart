@@ -41,6 +41,25 @@ class _GesturesDemoState extends State<GesturesDemo> {
                 debugPrint(i.toString());
               },
             ),
+            SizedBox(
+              height: 200.s,
+              width: double.maxFinite,
+            ),
+            CountHabit(
+              total: 50,
+              nowNum: 0,
+              content: "zhen bu cuo",
+              icon: Icons.ac_unit_outlined,
+              tap: () {
+                debugPrint("1");
+              },
+              doubleTap: () {
+                debugPrint("2");
+              },
+              pressEnd: (i) {
+                debugPrint(i.toString());
+              },
+            ),
           ],
         ));
   }
