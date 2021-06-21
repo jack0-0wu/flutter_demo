@@ -47,52 +47,55 @@ class _FadeDemo1State extends State<FadeDemo1> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          height: 100.s,
-        ),
-        Container(
-          color: Colors.white,
-          width: 150.s,
-          height: 150.s,
-          child: FadeTransition(
-            opacity: _animation,
-            child:
-                const Padding(padding: EdgeInsets.all(8), child: FlutterLogo()),
+    return Scaffold(
+      appBar: CustomAppBar(title: "渐变demo"),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 100.s,
           ),
-        ),
-        for (int i = 0; i < 5; i++)
           Container(
-            color: Color(0xFFFFFFFF & Random().nextInt(0xFFFFFFFF)),
+            color: Colors.white,
             width: 150.s,
             height: 150.s,
-            margin: EdgeInsets.fromLTRB(0, 30.s, 0, 0),
+            child: FadeTransition(
+              opacity: _animation,
+              child: const Padding(
+                  padding: EdgeInsets.all(8), child: FlutterLogo()),
+            ),
           ),
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context,
-                PageRouteBuilder(transitionsBuilder:
-                    (context, animation, secondaryAnimation, child) {
-                  return FadeThroughTransition(
-                    fillColor: Theme.of(context).scaffoldBackgroundColor,
-                    animation: animation,
-                    secondaryAnimation: secondaryAnimation,
-                    child: child,
-                  );
-                }, pageBuilder: (context, animation, secondaryAnimation) {
-                  return FadeDemo2();
-                }));
-          },
-          child: Container(
-            width: 100.s,
-            height: 100.s,
-            child: Text("跳转"),
-            color: Colors.blueAccent,
-          ),
-        )
-      ],
+          for (int i = 0; i < 3; i++)
+            Container(
+              color: Color(0xFFFFFFFF & Random().nextInt(0xFFFFFFFF)),
+              width: 150.s,
+              height: 150.s,
+              margin: EdgeInsets.fromLTRB(0, 30.s, 0, 0),
+            ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageRouteBuilder(transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    return FadeThroughTransition(
+                      fillColor: Theme.of(context).scaffoldBackgroundColor,
+                      animation: animation,
+                      secondaryAnimation: secondaryAnimation,
+                      child: child,
+                    );
+                  }, pageBuilder: (context, animation, secondaryAnimation) {
+                    return FadeDemo2();
+                  }));
+            },
+            child: Container(
+              width: 100.s,
+              height: 100.s,
+              child: Text("跳转"),
+              color: Colors.blueAccent,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
@@ -112,7 +115,7 @@ class _FadeDemo2State extends State<FadeDemo2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "手势demo"),
+      appBar: CustomAppBar(title: "动画demo"),
       body: Column(
         children: [
           Text(

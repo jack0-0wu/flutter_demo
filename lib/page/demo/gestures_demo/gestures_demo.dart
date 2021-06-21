@@ -19,6 +19,7 @@ class _GesturesDemoState extends State<GesturesDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
+        appBar: CustomAppBar(title: "手势demo"),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
