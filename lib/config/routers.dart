@@ -11,6 +11,7 @@ import 'package:flutter_demo/page/demo/clean_cache_demo/clean_cache_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture_demo/clipping_demo.dart';
 import 'package:flutter_demo/page/demo/clipping_picture_demo/clipping_picture.dart';
 import 'package:flutter_demo/page/demo/clipping_picture_demo/crop_demo.dart';
+import 'package:flutter_demo/page/demo/constraints_demo/constraints_demo.dart';
 import 'package:flutter_demo/page/demo/fade_animation_demo/fade_animation_demo.dart';
 import 'package:flutter_demo/page/demo/faker_demo/faker_demo.dart';
 import 'package:flutter_demo/page/demo/gestures_demo/gestures_demo.dart';
@@ -84,9 +85,9 @@ class Routers {
     'UIDemo': UIDemo(),
     'UIDemo2': UIDemo2(),
     'UIDemo3': UIDemo3(),
-    'example1': Example1(),
-    'example2': Example2(),
-    'example3': Example3(),
+    // 'example1': Example1(),
+    // 'example2': Example2(),
+    // 'example3': Example3(),
     'widgetToImageDemo': WidgetToImageDemo(),
     'fadeInDemo': FadeInDemo(),
     'animatedContainerDemo': AnimatedContainerDemo(),
@@ -94,5 +95,6 @@ class Routers {
     'fadeDemo1': FadeDemo1(),
     'homePage': HomePage(),
     'favoritesPage': FavoritesPage(),
+    'constraintsPage': ConstraintsPage(),
   };
 }
