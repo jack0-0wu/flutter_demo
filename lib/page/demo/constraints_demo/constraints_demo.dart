@@ -12,6 +12,7 @@ const big = const TextStyle(fontSize: 30);
 
 //////////////////////////////////////////////////
 
+//当给定无界约束，尽可能大的框不会有用
 class ConstraintsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => FlutterLayoutArticle(<Example>[
