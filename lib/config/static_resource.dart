@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 class StaticResource {
   //首页demoMap
   static final Map<String, String> demoMap = {
-    "屏幕约束": "constraintsPage",
+    "过渡动画": "transFormDemo",
     "淡入淡出动画组件": "fadeDemo1",
     "手势组件": "gesturesDemo",
     "形状变换动画": "animatedContainerDemo",
@@ -32,7 +32,7 @@ class StaticResource {
     "响应式布局相关组件 Demo4": "expandedFlexibleDemo",
     "响应式布局相关组件 Demo5": "fractionallySizedDemo",
     "响应式布局相关组件 Demo6": "aspectRatioDemo",
-
+    // "屏幕约束": "constraintsPage",
     // "json转model Demo": "jsonToModelDemo",
     // "自定义横向Tab": "pageDemo",
     // "测试Flutter": "homePage",

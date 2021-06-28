@@ -41,6 +41,7 @@ import 'package:flutter_demo/page/demo/test_demo/test_favorites.dart';
 import 'package:flutter_demo/page/demo/test_demo/test_home.dart';
 import 'package:flutter_demo/page/demo/theme_demo/theme_demo.dart';
 import 'package:flutter_demo/page/demo/today_food_demo/today_food_demo.dart';
+import 'package:flutter_demo/page/demo/transform_demo/transform_demo.dart';
 import 'package:flutter_demo/page/demo/ui_demo/ui_demo.dart';
 import 'package:flutter_demo/page/demo/ui_demo/ui_demo2.dart';
 import 'package:flutter_demo/page/demo/ui_demo/ui_demo3.dart';
@@ -96,5 +97,6 @@ class Routers {
     'homePage': HomePage(),
     'favoritesPage': FavoritesPage(),
     'constraintsPage': ConstraintsPage(),
+    'transFormDemo': TransFormDemo(),
   };
 }
