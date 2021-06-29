@@ -62,7 +62,7 @@ class _TransFormDemoState extends State<TransFormDemo>
               ),
               animation: animationController,
               secondaryAnimation: secondAnimationController,
-              transitionType: SharedAxisTransitionType.horizontal,
+              transitionType: SharedAxisTransitionType.scaled,
             ),
           ),
         ));
