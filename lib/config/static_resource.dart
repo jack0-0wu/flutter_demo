@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 class StaticResource {
   //首页demoMap
   static final Map<String, String> demoMap = {
+    "渐变动画": "tweenDemo",
     "过渡动画": "transFormDemo",
     "淡入淡出动画组件": "fadeDemo1",
     "手势组件": "gesturesDemo",

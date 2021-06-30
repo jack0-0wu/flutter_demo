@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_demo/config/static_resource.dart';
 import 'package:flutter_demo/page/demo/animation_demo/container_demo.dart';
 import 'package:flutter_demo/page/demo/animation_demo/text_demo.dart';
+import 'package:flutter_demo/page/demo/animation_demo/tween_demo.dart';
 import 'package:flutter_demo/page/demo/asynchronous_demo/futureBuilder_demo.dart';
 import 'package:flutter_demo/page/demo/asynchronous_demo/future_demo.dart';
 import 'package:flutter_demo/page/demo/asynchronous_demo/streamBuilder_demo.dart';
@@ -98,5 +99,6 @@ class Routers {
     'favoritesPage': FavoritesPage(),
     'constraintsPage': ConstraintsPage(),
     'transFormDemo': TransFormDemo(),
+    'tweenDemo': TweenDemo(),
   };
 }
