@@ -22,36 +22,46 @@ class _NumAnimationDemoState extends State<NumAnimationDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(title: "数字变换Demo"),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 100,
-          ),
-          AnimText(
-            endNumber: 10,
-            beginNumber: 0,
-            duration: 1000,
-            key: key,
-          ),
-          AnimText(
-            endNumber: 190,
-            beginNumber: 100,
-            duration: 1000,
-            key: key2,
-          ),
-          GestureDetector(
-            onTap: () {
-              key = UniqueKey();
-              key2 = UniqueKey();
-              setState(() {});
-            },
-            child: Container(
-              width: 100,
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(
               height: 100,
-              color: Colors.amber,
             ),
-          )
-        ],
+            AnimText(
+              endNumber: 10,
+              beginNumber: 0,
+              duration: 500,
+              key: key,
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            AnimText(
+              endNumber: 190,
+              beginNumber: 0,
+              duration: 1000,
+              key: key2,
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            GestureDetector(
+              onTap: () {
+                key = UniqueKey();
+                key2 = UniqueKey();
+                setState(() {});
+              },
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.amber,
+                alignment: Alignment.center,
+                child: Text("点击播放动画"),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

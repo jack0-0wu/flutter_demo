@@ -1,15 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/util/custom_widget.dart';
 
 /// @author wu chao
 /// @project flutter_demo
 /// @date 2021/7/1
-class BuilderDemo extends StatefulWidget {
+class AnimationBuilderDemo extends StatefulWidget {
   @override
-  _BuilderDemoState createState() => _BuilderDemoState();
+  _AnimationBuilderDemoState createState() => _AnimationBuilderDemoState();
 }
 
-class _BuilderDemoState extends State<BuilderDemo>
+class _AnimationBuilderDemoState extends State<AnimationBuilderDemo>
     with SingleTickerProviderStateMixin {
   AnimationController _animation;
 
@@ -24,14 +25,17 @@ class _BuilderDemoState extends State<BuilderDemo>
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: AlignmentDirectional.center,
-      children: <Widget>[
-        // starsBackground,
-        BeamTransition(animation: _animation),
-        // ufo,
-        // AlignTransition(alignment: alignment, child: child)
-      ],
+    return Scaffold(
+      appBar:CustomAppBar(title: "灯光渐变动画"),
+      body: Stack(
+        alignment: AlignmentDirectional.center,
+        children: <Widget>[
+          // starsBackground,
+          BeamTransition(animation: _animation),
+          // ufo,
+          // AlignTransition(alignment: alignment, child: child)
+        ],
+      ),
     );
   }
 

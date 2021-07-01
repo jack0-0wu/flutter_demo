@@ -1,92 +1,17 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_demo/config/static_resource.dart';
-import 'package:flutter_demo/page/demo/animation_demo/builder_demo.dart';
-import 'package:flutter_demo/page/demo/animation_demo/container_demo.dart';
-import 'package:flutter_demo/page/demo/animation_demo/text_demo.dart';
-import 'package:flutter_demo/page/demo/animation_demo/tween_demo.dart';
-import 'package:flutter_demo/page/demo/funny_widget_demo/circular_menu.dart';
-import 'package:flutter_demo/page/demo/study_demo/futureBuilder_demo.dart';
-import 'package:flutter_demo/page/demo/study_demo/future_demo.dart';
-import 'package:flutter_demo/page/demo/study_demo/streamBuilder_demo.dart';
-import 'package:flutter_demo/page/demo/study_demo/stream_demo.dart';
-import 'package:flutter_demo/page/demo/util_demo/clean_cache_demo.dart';
+import 'package:flutter_demo/page/demo/animation_demo/aimation_builder_demo.dart';
+import 'package:flutter_demo/page/demo/animation_demo/animation_container_demo.dart';
 import 'package:flutter_demo/page/demo/animation_demo/fade_animation_demo.dart';
-import 'package:flutter_demo/page/demo/util_demo/faker_demo.dart';
-import 'package:flutter_demo/page/demo/funny_widget_demo/gestures_demo.dart';
-import 'package:flutter_demo/page/demo/util_demo/globalKey_demo.dart';
-import 'package:flutter_demo/page/demo/index/index.dart';
-import 'package:flutter_demo/page/demo/funny_widget_demo/indicator_demo.dart';
-import 'package:flutter_demo/page/demo/funny_widget_demo/indicator_demo2.dart';
-import 'package:flutter_demo/page/demo/funny_widget_demo/ios_bottom_demo.dart';
-import 'package:flutter_demo/page/demo/util_demo/json_to_model_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/constraints_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/ui_demo2.dart';
-import 'package:flutter_demo/page/demo/util_demo/logger_demo.dart';
 import 'package:flutter_demo/page/demo/animation_demo/num_animation_demo.dart';
-import 'package:flutter_demo/page/demo/util_demo/PageViewDemo.dart';
-import 'package:flutter_demo/page/demo/util_demo/PageDemo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/aspectRatio_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/expanded_flexible_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/fractionallySized_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/layoutBuilder_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/mediaQuery_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/orientationBuilder_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/richText_demo.dart';
-import 'package:flutter_demo/page/demo/util_demo/router_test.dart';
-import 'package:flutter_demo/page/demo/util_demo/router_test2.dart';
-import 'package:flutter_demo/page/demo/funny_widget_demo/bottom_anim_nav_page.dart';
-import 'package:flutter_demo/page/demo/study_demo/test_favorites.dart';
-import 'package:flutter_demo/page/demo/study_demo/test_home.dart';
-import 'package:flutter_demo/page/demo/util_demo/theme_demo.dart';
-import 'package:flutter_demo/page/demo/animation_demo/transform_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/ui_demo.dart';
-import 'package:flutter_demo/page/demo/layout_demo/ui_demo3.dart';
-import 'package:flutter_demo/page/demo/util_demo/widget_to_image_demo.dart';
+import 'package:flutter_demo/page/demo/funny_widget_demo/circular_menu.dart';
 
 class Routers {
   //路由表
   static final Map<String, Widget> routerMap = {
-    'routerTest': RouterTest(),
-    'routerTest2': RouterTest2(),
-    'index': Index(),
-    'richTextDemo': RichTextDemo(),
-    'loggerDemo': LoggerDemo(),
-    'fakerDemo': FakerDemo(),
-    'jsonToModelDemo': JsonToModelDemo(),
-    'cleanCacheDemo': CleanCacheDemo(),
-    'mediaQueryDemo': MediaQueryDemo(),
-    'layoutBuilderDemo': LayoutBuilderDemo(),
-    'orientationBuilderDemo': OrientationBuilderDemo(),
-    'expandedFlexibleDemo': ExpandedFlexibleDemo(),
-    'fractionallySizedDemo': FractionallySizedDemo(),
-    'aspectRatioDemo': AspectRatioDemo(),
-    'futureDemo': FutureDemo(),
-    'streamDemo': StreamDemo(),
-    'streamBuilderDemo': StreamBuilderDemo(),
-    'futureBuilderDemo': FutureBuilderDemo(),
-    'bottomAnimNavPage': BottomAnimNavPage(),
-    'iosBottomDemo': IosBottomDemo(),
-    'globalKeyDemo': GlobalKeyDemo(key: StaticResource.testKey),
-    'pageDemo': PageDemo(),
-    'pageViewDemo': PageViewDemo(),
-    'indicatorDemo': IndicatorDemo(),
-    'indicatorDemo2': IndicatorDemo2(),
-    'themeDemo': ThemeDemo(),
-    'numAnimationDemo': NumAnimationDemo(),
-    'UIDemo': UIDemo(),
-    'UIDemo2': UIDemo2(),
-    'UIDemo3': UIDemo3(),
-    'widgetToImageDemo': WidgetToImageDemo(),
-    'fadeInDemo': FadeInDemo(),
-    'animatedContainerDemo': AnimatedContainerDemo(),
-    'gesturesDemo': GesturesDemo(),
-    'fadeDemo1': FadeDemo1(),
-    'homePage': HomePage(),
-    'favoritesPage': FavoritesPage(),
-    'constraintsPage': ConstraintsPage(),
-    'transFormDemo': TransFormDemo(),
-    'tweenDemo': TweenDemo(),
-    'builderDemo': BuilderDemo(),
     'circularMenuDemo': CircularMenuDemo(),
+    'animationBuilderDemo': AnimationBuilderDemo(),
+    'animationContainerDemo': AnimationContainerDemo(),
+    'fadeDemo': FadeDemo(),
+    'numAnimationDemo': NumAnimationDemo(),
   };
 }

@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'container_demo.dart';
+import 'animation_container_demo.dart';
 
 /// @author wu chao
 /// @project flutter_demo
@@ -53,7 +53,7 @@ class _TweenDemoState extends State<TweenDemo>
                     Animation<double> animation,
                     Animation<double> secondaryAnimation,
                   ) =>
-                      AnimatedContainerDemo(),
+                      AnimationContainerDemo(),
                   transitionsBuilder: (
                     BuildContext context,
                     Animation<double> animation,

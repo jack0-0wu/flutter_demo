@@ -20,11 +20,11 @@ Color randomColor() {
   return Color(0xFFFFFFFF & Random().nextInt(0xFFFFFFFF));
 }
 
-class AnimatedContainerDemo extends StatefulWidget {
-  _AnimatedContainerDemoState createState() => _AnimatedContainerDemoState();
+class AnimationContainerDemo extends StatefulWidget {
+  _AnimationContainerDemoState createState() => _AnimationContainerDemoState();
 }
 
-class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
+class _AnimationContainerDemoState extends State<AnimationContainerDemo> {
   Color color;
   double borderRadius;
   double margin;
@@ -65,7 +65,6 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
                 duration: _duration,
                 //curve在 duration 时长内控制动画的速率变化
                 curve: Curves.bounceIn,
-
                 margin: EdgeInsets.all(margin),
                 decoration: BoxDecoration(
                   color: color,

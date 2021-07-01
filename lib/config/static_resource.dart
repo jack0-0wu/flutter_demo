@@ -9,9 +9,11 @@ import 'package:flutter/material.dart';
 class StaticResource {
   //首页demoMap
   static final Map<String, String> demoMap = {
-    "圆形菜单": "circularMenuDemo",
-    "自定义动画": "builderDemo",
-    "自定义动画": "builderDemo",
+    "圆形菜单栏": "circularMenuDemo",
+    "灯光渐变动画": "animationBuilderDemo",
+    "容器外观变换动画": "animationContainerDemo",
+    "文字容器颜色渐变": "fadeDemo",
+    "数字变换动画": "numAnimationDemo",
   };
 
   //测试用key
