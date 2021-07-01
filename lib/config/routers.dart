@@ -1,64 +1,54 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_demo/config/static_resource.dart';
+import 'package:flutter_demo/page/demo/animation_demo/builder_demo.dart';
 import 'package:flutter_demo/page/demo/animation_demo/container_demo.dart';
 import 'package:flutter_demo/page/demo/animation_demo/text_demo.dart';
 import 'package:flutter_demo/page/demo/animation_demo/tween_demo.dart';
-import 'package:flutter_demo/page/demo/asynchronous_demo/futureBuilder_demo.dart';
-import 'package:flutter_demo/page/demo/asynchronous_demo/future_demo.dart';
-import 'package:flutter_demo/page/demo/asynchronous_demo/streamBuilder_demo.dart';
-import 'package:flutter_demo/page/demo/asynchronous_demo/stream_demo.dart';
-import 'package:flutter_demo/page/demo/camera_demo/camera_demo.dart';
-import 'package:flutter_demo/page/demo/clean_cache_demo/clean_cache_demo.dart';
-import 'package:flutter_demo/page/demo/clipping_picture_demo/clipping_demo.dart';
-import 'package:flutter_demo/page/demo/clipping_picture_demo/clipping_picture.dart';
-import 'package:flutter_demo/page/demo/clipping_picture_demo/crop_demo.dart';
-import 'package:flutter_demo/page/demo/constraints_demo/constraints_demo.dart';
-import 'package:flutter_demo/page/demo/fade_animation_demo/fade_animation_demo.dart';
-import 'package:flutter_demo/page/demo/faker_demo/faker_demo.dart';
-import 'package:flutter_demo/page/demo/gestures_demo/gestures_demo.dart';
-import 'package:flutter_demo/page/demo/globalKey_demo/globalKey_demo.dart';
+import 'package:flutter_demo/page/demo/funny_widget_demo/circular_menu.dart';
+import 'package:flutter_demo/page/demo/study_demo/futureBuilder_demo.dart';
+import 'package:flutter_demo/page/demo/study_demo/future_demo.dart';
+import 'package:flutter_demo/page/demo/study_demo/streamBuilder_demo.dart';
+import 'package:flutter_demo/page/demo/study_demo/stream_demo.dart';
+import 'package:flutter_demo/page/demo/util_demo/clean_cache_demo.dart';
+import 'package:flutter_demo/page/demo/animation_demo/fade_animation_demo.dart';
+import 'package:flutter_demo/page/demo/util_demo/faker_demo.dart';
+import 'package:flutter_demo/page/demo/funny_widget_demo/gestures_demo.dart';
+import 'package:flutter_demo/page/demo/util_demo/globalKey_demo.dart';
 import 'package:flutter_demo/page/demo/index/index.dart';
-import 'package:flutter_demo/page/demo/indicator_demo/indicator_demo.dart';
-import 'package:flutter_demo/page/demo/indicator_demo/indicator_demo2.dart';
-import 'package:flutter_demo/page/demo/inspector_demo/inspector_demo.dart';
-import 'package:flutter_demo/page/demo/ios_bottom_demo/ios_bottom_demo.dart';
-import 'package:flutter_demo/page/demo/json_to_model_demo/json_to_model_demo.dart';
-import 'package:flutter_demo/page/demo/logger_demo/logger_demo.dart';
-import 'package:flutter_demo/page/demo/num_animation_demo/num_animation_demo.dart';
-import 'package:flutter_demo/page/demo/pageView_demo/PageViewDemo.dart';
-import 'package:flutter_demo/page/demo/page_demo/PageDemo.dart';
-import 'package:flutter_demo/page/demo/planfrom_demo/planform_channel_demo2.dart';
-import 'package:flutter_demo/page/demo/responsiveness_demo/aspectRatio_demo.dart';
-import 'package:flutter_demo/page/demo/responsiveness_demo/expanded_flexible_demo.dart';
-import 'package:flutter_demo/page/demo/responsiveness_demo/fractionallySized_demo.dart';
-import 'package:flutter_demo/page/demo/responsiveness_demo/layoutBuilder_demo.dart';
-import 'package:flutter_demo/page/demo/responsiveness_demo/mediaQuery_demo.dart';
-import 'package:flutter_demo/page/demo/responsiveness_demo/orientationBuilder_demo.dart';
-import 'package:flutter_demo/page/demo/richtext_demo/richText_demo.dart';
-import 'package:flutter_demo/page/demo/router_demo/router_test.dart';
-import 'package:flutter_demo/page/demo/router_demo/router_test2.dart';
-import 'package:flutter_demo/page/demo/selector_demo/bottom_anim_nav_page.dart';
-import 'package:flutter_demo/page/demo/test_demo/test_favorites.dart';
-import 'package:flutter_demo/page/demo/test_demo/test_home.dart';
-import 'package:flutter_demo/page/demo/theme_demo/theme_demo.dart';
-import 'package:flutter_demo/page/demo/today_food_demo/today_food_demo.dart';
-import 'package:flutter_demo/page/demo/transform_demo/transform_demo.dart';
-import 'package:flutter_demo/page/demo/ui_demo/ui_demo.dart';
-import 'package:flutter_demo/page/demo/ui_demo/ui_demo2.dart';
-import 'package:flutter_demo/page/demo/ui_demo/ui_demo3.dart';
-import 'package:flutter_demo/page/demo/widget_to_image_demo/widget_to_image_demo.dart';
+import 'package:flutter_demo/page/demo/funny_widget_demo/indicator_demo.dart';
+import 'package:flutter_demo/page/demo/funny_widget_demo/indicator_demo2.dart';
+import 'package:flutter_demo/page/demo/funny_widget_demo/ios_bottom_demo.dart';
+import 'package:flutter_demo/page/demo/util_demo/json_to_model_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/constraints_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/ui_demo2.dart';
+import 'package:flutter_demo/page/demo/util_demo/logger_demo.dart';
+import 'package:flutter_demo/page/demo/animation_demo/num_animation_demo.dart';
+import 'package:flutter_demo/page/demo/util_demo/PageViewDemo.dart';
+import 'package:flutter_demo/page/demo/util_demo/PageDemo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/aspectRatio_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/expanded_flexible_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/fractionallySized_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/layoutBuilder_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/mediaQuery_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/orientationBuilder_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/richText_demo.dart';
+import 'package:flutter_demo/page/demo/util_demo/router_test.dart';
+import 'package:flutter_demo/page/demo/util_demo/router_test2.dart';
+import 'package:flutter_demo/page/demo/funny_widget_demo/bottom_anim_nav_page.dart';
+import 'package:flutter_demo/page/demo/study_demo/test_favorites.dart';
+import 'package:flutter_demo/page/demo/study_demo/test_home.dart';
+import 'package:flutter_demo/page/demo/util_demo/theme_demo.dart';
+import 'package:flutter_demo/page/demo/animation_demo/transform_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/ui_demo.dart';
+import 'package:flutter_demo/page/demo/layout_demo/ui_demo3.dart';
+import 'package:flutter_demo/page/demo/util_demo/widget_to_image_demo.dart';
 
 class Routers {
   //路由表
   static final Map<String, Widget> routerMap = {
     'routerTest': RouterTest(),
-    'todayFoodDemo': TodayFoodDemo(),
-    'planFromTest': PlanFromTest(),
     'routerTest2': RouterTest2(),
     'index': Index(),
-    'cropDemo': CropDemo(),
-    'clippingDemo': ClippingDemo(),
-    'clippingPicture': ClippingPicture(),
     'richTextDemo': RichTextDemo(),
     'loggerDemo': LoggerDemo(),
     'fakerDemo': FakerDemo(),
@@ -70,7 +60,6 @@ class Routers {
     'expandedFlexibleDemo': ExpandedFlexibleDemo(),
     'fractionallySizedDemo': FractionallySizedDemo(),
     'aspectRatioDemo': AspectRatioDemo(),
-    'cameraDemo': CameraDemo(),
     'futureDemo': FutureDemo(),
     'streamDemo': StreamDemo(),
     'streamBuilderDemo': StreamBuilderDemo(),
@@ -87,9 +76,6 @@ class Routers {
     'UIDemo': UIDemo(),
     'UIDemo2': UIDemo2(),
     'UIDemo3': UIDemo3(),
-    // 'example1': Example1(),
-    // 'example2': Example2(),
-    // 'example3': Example3(),
     'widgetToImageDemo': WidgetToImageDemo(),
     'fadeInDemo': FadeInDemo(),
     'animatedContainerDemo': AnimatedContainerDemo(),
@@ -100,5 +86,7 @@ class Routers {
     'constraintsPage': ConstraintsPage(),
     'transFormDemo': TransFormDemo(),
     'tweenDemo': TweenDemo(),
+    'builderDemo': BuilderDemo(),
+    'circularMenuDemo': CircularMenuDemo(),
   };
 }

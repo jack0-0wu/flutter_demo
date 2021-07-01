@@ -54,6 +54,8 @@ dependencies:
   cupertino_icons: ^0.1.3
   #翻转页面
   page_flip_builder: ^0.1.3
+  #圆形菜单
+  circular_menu: ^1.1.2
 
 
 

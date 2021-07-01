@@ -2,7 +2,7 @@
 /// @project flutter_demo
 /// @date 2021/6/19
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/page/demo/test_demo/test_favorites.dart';
+import 'package:flutter_demo/page/demo/study_demo/test_favorites.dart';
 import 'package:flutter_demo/util/router_util.dart';
 import 'package:provider/provider.dart';
 

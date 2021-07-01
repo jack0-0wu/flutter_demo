@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/page/demo/theme_demo/theme.dart';
-import 'package:flutter_demo/page/demo/theme_demo/theme_provider.dart';
+import 'package:flutter_demo/page/demo/util_demo/theme.dart';
+import 'package:flutter_demo/page/demo/util_demo/theme_provider.dart';
 import 'package:flutter_demo/util/custom_widget.dart';
 import 'package:flutter_demo/util/util.dart';
 import 'package:provider/provider.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/page/demo/num_animation_demo/num_animation.dart';
+import 'package:flutter_demo/page/demo/animation_demo/num_animation.dart';
 import 'package:flutter_demo/util/custom_widget.dart';
 
 /**
