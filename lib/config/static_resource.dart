@@ -14,6 +14,7 @@ class StaticResource {
     "容器外观变换动画": "animationContainerDemo",
     "文字容器颜色渐变": "fadeDemo",
     "数字变换动画": "numAnimationDemo",
+    "物理卡片拖动动画": "physicsCardDragDemo",
   };
 
   //测试用key
