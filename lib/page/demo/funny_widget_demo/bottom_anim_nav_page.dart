@@ -25,7 +25,7 @@ class _BottomAnimNavPageState extends State<BottomAnimNavPage>
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColorDark,
       appBar: AppBar(
-        title: new Text("ViewPagerDemoPage"),
+        title:  Text("圆形选择器组件"),
       ),
       body: Container(
         alignment: Alignment.bottomCenter,

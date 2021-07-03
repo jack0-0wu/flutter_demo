@@ -15,6 +15,12 @@ class StaticResource {
     "文字容器颜色渐变": "fadeDemo",
     "数字变换动画": "numAnimationDemo",
     "物理卡片拖动动画": "physicsCardDragDemo",
+    "补间动画": "tweenDemo",
+    "卡片左右滑切换动画": "transFormDemo",
+    "圆形选择器组件": "bottomAnimNavPage",
+    "纵向选择器组件": "indicatorDemo",
+    "横向选择器组件": "indicatorDemo2",
+    "IOS风格的底部选择器": "iosBottomDemo",
   };
 
   //测试用key

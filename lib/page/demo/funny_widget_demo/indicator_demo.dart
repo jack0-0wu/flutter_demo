@@ -57,7 +57,7 @@ class _IndicatorDemoState extends State<IndicatorDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomAppBar(title: "纵向滑动选择器demo"),
+        appBar: CustomAppBar(title: "纵向滑动选择器组件"),
         body: Column(
           children: [
             IndexBar(

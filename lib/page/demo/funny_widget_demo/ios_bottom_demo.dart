@@ -19,7 +19,7 @@ class _IosBottomDemoState extends State<IosBottomDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "ios selector demo"),
+      appBar: CustomAppBar(title: "IOS风格的底部选择器"),
       body: Center(
           child: GestureDetector(
         child: Container(
@@ -33,7 +33,7 @@ class _IosBottomDemoState extends State<IosBottomDemo> {
               backgroundColor: Colors.transparent, //重点
               builder: (context) {
                 return Container(
-                  height: 510.s,
+                  height: 450.s,
                   padding: EdgeInsets.fromLTRB(0, 40.s, 0, 0),
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -49,9 +49,6 @@ class _IosBottomDemoState extends State<IosBottomDemo> {
                             "Cancel",
                           ),
                           Text(
-                            "Select Units",
-                          ),
-                          Text(
                             "Done",
                           ),
                         ],
@@ -60,7 +57,7 @@ class _IosBottomDemoState extends State<IosBottomDemo> {
                         height: 80.s,
                       ),
                       Container(
-                        height: 300.s,
+                        height: 230.s,
                         child: CupertinoPicker(
                           useMagnifier: true,
                           itemExtent: 100.s,

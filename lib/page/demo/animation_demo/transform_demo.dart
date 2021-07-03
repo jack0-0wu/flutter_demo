@@ -50,7 +50,7 @@ class _TransFormDemoState extends State<TransFormDemo>
           }
         },
         child: Scaffold(
-          appBar: CustomAppBar(title: "过渡动画"),
+          appBar: CustomAppBar(title: "卡片左右滑切换动画"),
           body: Center(
             child: SharedAxisTransition(
               child: Container(

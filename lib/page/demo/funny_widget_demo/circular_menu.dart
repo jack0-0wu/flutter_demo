@@ -23,9 +23,8 @@ class _CircularMenuDemoState extends State<CircularMenuDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink,
         title: Text(
-          'Flutter Circular Menu',
+          '圆形菜单栏',
           style: TextStyle(
             color: Colors.white,
           ),
