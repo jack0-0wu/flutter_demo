@@ -8,6 +8,7 @@ import 'package:flutter_demo/page/demo/animation_demo/transform_demo.dart';
 import 'package:flutter_demo/page/demo/animation_demo/tween_demo.dart';
 import 'package:flutter_demo/page/demo/funny_widget_demo/bottom_anim_nav_page.dart';
 import 'package:flutter_demo/page/demo/funny_widget_demo/circular_menu.dart';
+import 'package:flutter_demo/page/demo/funny_widget_demo/gestures_demo.dart';
 import 'package:flutter_demo/page/demo/funny_widget_demo/indicator_demo.dart';
 import 'package:flutter_demo/page/demo/funny_widget_demo/indicator_demo2.dart';
 import 'package:flutter_demo/page/demo/funny_widget_demo/ios_bottom_demo.dart';
@@ -27,5 +28,6 @@ class Routers {
     'indicatorDemo': IndicatorDemo(),
     'indicatorDemo2': IndicatorDemo2(),
     'iosBottomDemo': IosBottomDemo(),
+    'gesturesDemo': GesturesDemo(),
   };
 }

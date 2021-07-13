@@ -21,6 +21,7 @@ class StaticResource {
     "纵向选择器组件": "indicatorDemo",
     "横向选择器组件": "indicatorDemo2",
     "IOS风格的底部选择器": "iosBottomDemo",
+    "响应不同手势的组件": "gesturesDemo",
   };
 
   //测试用key
