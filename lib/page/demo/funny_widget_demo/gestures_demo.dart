@@ -21,6 +21,7 @@ class _GesturesDemoState extends State<GesturesDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(title: "响应手势的组件"),
         backgroundColor: Colors.white,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
