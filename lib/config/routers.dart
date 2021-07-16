@@ -13,7 +13,6 @@ import 'package:flutter_demo/page/demo/funny_widget_demo/indicator_demo.dart';
 import 'package:flutter_demo/page/demo/funny_widget_demo/indicator_demo2.dart';
 import 'package:flutter_demo/page/demo/funny_widget_demo/ios_bottom_demo.dart';
 import 'package:flutter_demo/page/demo/funny_widget_demo/sliver_demo.dart';
-import 'package:flutter_demo/page/demo/util_demo/record.dart';
 
 class Routers {
   //路由表
@@ -33,6 +32,5 @@ class Routers {
     'gesturesDemo': GesturesDemo(),
     'sliverDemo': SliverDemo(),
     'collapsingList': CollapsingList(),
-    'simpleRecorder': SimpleRecorder(),
   };
 }

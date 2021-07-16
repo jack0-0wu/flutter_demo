@@ -24,7 +24,6 @@ class StaticResource {
     "响应不同手势的组件": "gesturesDemo",
     "sliver滑动列表": "sliverDemo",
     "复杂的sliver滑动列表": "collapsingList",
-    "录音demo": "simpleRecorder",
   };
 
   //测试用key
